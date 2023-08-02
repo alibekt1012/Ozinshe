@@ -27,6 +27,12 @@ class ProfileViewController: UIViewController, LanguageProtocol {
         configureViews()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? PersonalDataViewController {
+            destinationVC.hidesBottomBarWhenPushed = true
+        }
+    }
+    
     func configureViews() {
         
         myProfileLabel.text = "MY_PROFILE".localized()

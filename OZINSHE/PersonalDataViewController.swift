@@ -9,9 +9,10 @@ import UIKit
 
 class PersonalDataViewController: UIViewController {
 
+    @IBOutlet var saveChangesButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        saveChangesButton.layer.cornerRadius = 12
         // Do any additional setup after loading the view.
     }
     
