@@ -25,7 +25,8 @@ class LanguageViewController: UIViewController, UIGestureRecognizerDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        configureViews()
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
@@ -39,6 +40,11 @@ class LanguageViewController: UIViewController, UIGestureRecognizerDelegate, UIT
         tap.delegate = self
         view.addGestureRecognizer(tap)
     }
+    
+    func configureViews() {
+        languageLabel.text = "LANGUAGE".localized()
+    }
+    
     @objc func dismissView() {
         dismiss(animated: true)
         
