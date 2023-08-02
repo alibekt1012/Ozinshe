@@ -63,6 +63,9 @@
                                         <state key="normal" title="Жеке деректер">
                                             <color key="titleColor" red="0.10980392156862745" green="0.14117647058823529" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="76c-Qa-jWn" kind="show" id="qDr-ax-t75"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Gmx-ZX-ZXI">
                                         <rect key="frame" x="353" y="24" width="16" height="16"/>
@@ -382,7 +385,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-aa-rFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="1110"/>
+            <point key="canvasLocation" x="685" y="1040"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="e7F-4a-mrq">
+            <objects>
+                <viewController id="76c-Qa-jWn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gva-Jr-Awu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3BS-G9-BZa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L8A-RA-lur"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Mb-P8-gqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="1849"/>
         </scene>
         <!--Favorites Table View Controller-->
         <scene sceneID="MGK-YL-Nk8">
