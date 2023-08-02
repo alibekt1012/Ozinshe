@@ -7,3 +7,8 @@
 */
 "MY_PROFILE" = "Мой профиль";
 "LANGUAGE" = "Язык";
+"PERSONAL_DATA" = "Персональные данные";
+"CHANGE_PASSWORD" = "Изменить пароль";
+"TERMS_AND_CONDITIONS" = "Правила и условия";
+"NOTIFICATIONS" = "Уведомления";
+"DARK_MODE" = "Темный режим";

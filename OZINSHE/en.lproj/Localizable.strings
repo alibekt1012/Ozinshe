@@ -7,3 +7,8 @@
 */
 "MY_PROFILE" = "My profile";
 "LANGUAGE" = "Language";
+"PERSONAL_DATA" = "Personal data";
+"CHANGE_PASSWORD" = "Change password";
+"TERMS_AND_CONDITIONS" = "Terms and conditions";
+"NOTIFICATIONS" = "Notifications";
+"DARK_MODE" = "Dark mode";

@@ -265,9 +265,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="O9a-0V-XJF"/>
                     <connections>
+                        <outlet property="changePasswordButton" destination="jp6-NT-Et6" id="Leo-Ys-IUa"/>
+                        <outlet property="darkModeButton" destination="vgp-r5-drF" id="HUw-eW-5NG"/>
                         <outlet property="languageButton" destination="OsX-VO-Tjp" id="SOk-Kt-8nN"/>
                         <outlet property="languageLabel" destination="gqL-h3-Neq" id="ZxQ-71-p0T"/>
                         <outlet property="myProfileLabel" destination="67g-fw-JqN" id="jdQ-5J-1HX"/>
+                        <outlet property="notificationsButton" destination="3Wg-dF-JQl" id="J63-b6-OTI"/>
+                        <outlet property="personalDataButton" destination="xbJ-2Y-yiY" id="ahZ-zJ-mel"/>
+                        <outlet property="personalDataLabel" destination="j9h-OX-bl8" id="ZgV-2C-Ctl"/>
+                        <outlet property="termsAndConditionsButton" destination="All-5O-NOO" id="6cN-oc-mkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6B-s4-3KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
