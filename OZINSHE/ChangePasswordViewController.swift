@@ -1,25 +1,18 @@
 //
-//  PersonalDataViewController.swift
+//  ChangePasswordViewController.swift
 //  OZINSHE
 //
-//  Created by Almat Alibekov on 02.08.2023.
+//  Created by Almat Alibekov on 03.08.2023.
 //
 
 import UIKit
 
-class PersonalDataViewController: UIViewController {
+class ChangePasswordViewController: UIViewController {
 
-    @IBOutlet var saveChangesButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
+
         // Do any additional setup after loading the view.
-    }
-    
-    func configureViews() {
-        saveChangesButton.layer.cornerRadius = 12
-        navigationItem.title = "PERSONAL_DATA".localized()
-        
     }
     
 

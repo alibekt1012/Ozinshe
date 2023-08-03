@@ -94,6 +94,9 @@
                                         <state key="normal" title="Құпия сөзді өзгерту">
                                             <color key="titleColor" red="0.10980392156862745" green="0.14117647058823529" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="e9g-Yu-3Et" kind="show" id="icS-lp-9r2"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="xgo-PG-JBI">
                                         <rect key="frame" x="353" y="89" width="16" height="16"/>
@@ -266,7 +269,14 @@
                             <constraint firstItem="h37-8B-Klc" firstAttribute="top" secondItem="67g-fw-JqN" secondAttribute="bottom" constant="8" id="v3Y-wF-yog"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Профиль" id="O9a-0V-XJF"/>
+                    <navigationItem key="navigationItem" title="Профиль" id="O9a-0V-XJF">
+                        <barButtonItem key="rightBarButtonItem" image="LogOut" id="OGp-no-Npz">
+                            <color key="tintColor" red="1" green="0.25098039215686274" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logOut:" destination="RHC-C0-7xY" id="AIe-CL-VfK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="changePasswordButton" destination="jp6-NT-Et6" id="Leo-Ys-IUa"/>
                         <outlet property="darkModeButton" destination="vgp-r5-drF" id="HUw-eW-5NG"/>
@@ -385,7 +395,160 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cil-aa-rFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="1040"/>
+            <point key="canvasLocation" x="-338" y="1850"/>
+        </scene>
+        <!--Қүпия сөзді өзгерту-->
+        <scene sceneID="Ssk-lv-nSE">
+            <objects>
+                <viewController id="e9g-Yu-3Et" customClass="ChangePasswordViewController" customModule="OZINSHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHX-wi-Vli">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-ku-6kg">
+                                <rect key="frame" x="23.999999999999996" y="124" width="62.666666666666657" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqs-su-XRu">
+                                <rect key="frame" x="24" y="145" width="345" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="7HM-mR-HcR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөзді қайталаңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-KC-LSx">
+                                <rect key="frame" x="24" y="225" width="163" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-dd-Kcn">
+                                <rect key="frame" x="24" y="246" width="345" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="UKk-rf-zT0"/>
+                                </constraints>
+                                <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nK1-OP-FkR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yqs-su-XRu" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="9ug-21-Z2G"/>
+                            <constraint firstItem="XEc-dd-Kcn" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="KXF-tZ-pHt"/>
+                            <constraint firstItem="Vhl-KC-LSx" firstAttribute="top" secondItem="yqs-su-XRu" secondAttribute="bottom" constant="24" id="QgT-KL-eLn"/>
+                            <constraint firstItem="XEc-dd-Kcn" firstAttribute="top" secondItem="Vhl-KC-LSx" secondAttribute="bottom" constant="4" id="WT2-lt-M7q"/>
+                            <constraint firstItem="a5W-ku-6kg" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="Xa9-0H-fzC"/>
+                            <constraint firstItem="yqs-su-XRu" firstAttribute="top" secondItem="a5W-ku-6kg" secondAttribute="bottom" constant="4" id="awY-eZ-yi7"/>
+                            <constraint firstItem="nK1-OP-FkR" firstAttribute="trailing" secondItem="XEc-dd-Kcn" secondAttribute="trailing" constant="24" id="epk-WX-SVj"/>
+                            <constraint firstItem="Vhl-KC-LSx" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="vBD-e1-rlF"/>
+                            <constraint firstItem="a5W-ku-6kg" firstAttribute="top" secondItem="nK1-OP-FkR" secondAttribute="top" constant="21" id="wSy-8E-9wK"/>
+                            <constraint firstItem="nK1-OP-FkR" firstAttribute="trailing" secondItem="yqs-su-XRu" secondAttribute="trailing" constant="24" id="xWp-dK-w3f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Қүпия сөзді өзгерту" style="editor" id="Bs3-mS-x8r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8W-F2-uWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="1850"/>
+        </scene>
+        <!--Log Out View Controller-->
+        <scene sceneID="UtL-yE-YmG">
+            <objects>
+                <viewController storyboardIdentifier="LogOutViewController" id="5Ct-bX-qZ2" customClass="LogOutViewController" customModule="OZINSHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="04J-tC-Hsi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmy-ow-0Yb">
+                                <rect key="frame" x="0.0" y="549" width="393" height="303"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwh-vm-2S9">
+                                        <rect key="frame" x="164.66666666666666" y="21" width="64" height="5"/>
+                                        <color key="backgroundColor" red="0.81960784313725488" green="0.83529411764705885" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="jOX-ks-q0Y"/>
+                                            <constraint firstAttribute="width" constant="64" id="swt-XP-I0Y"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шығу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTX-DA-nDa">
+                                        <rect key="frame" x="24" y="57.999999999999993" width="66" height="28.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
+                                        <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сіз шынымен аккаунтыныздан " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydb-Qq-WBb">
+                                        <rect key="frame" x="23.999999999999986" y="94.666666666666629" width="218.66666666666663" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVI-on-laz">
+                                        <rect key="frame" x="24" y="147" width="345" height="56"/>
+                                        <color key="backgroundColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="8OX-gN-5vf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Иә, шығу">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjf-oe-zpc">
+                                        <rect key="frame" x="24" y="211" width="345" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Vl1-Qp-hqc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Жоқ">
+                                            <color key="titleColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aVI-on-laz" firstAttribute="leading" secondItem="pmy-ow-0Yb" secondAttribute="leading" constant="24" id="0a4-7Y-eef"/>
+                                    <constraint firstAttribute="trailing" secondItem="wjf-oe-zpc" secondAttribute="trailing" constant="24" id="2FR-MP-Ua4"/>
+                                    <constraint firstItem="wwh-vm-2S9" firstAttribute="top" secondItem="pmy-ow-0Yb" secondAttribute="top" constant="21" id="EXt-0K-Vqm"/>
+                                    <constraint firstItem="rTX-DA-nDa" firstAttribute="top" secondItem="pmy-ow-0Yb" secondAttribute="top" constant="58" id="EhP-oN-olW"/>
+                                    <constraint firstItem="wjf-oe-zpc" firstAttribute="leading" secondItem="pmy-ow-0Yb" secondAttribute="leading" constant="24" id="R8F-ip-vew"/>
+                                    <constraint firstItem="wjf-oe-zpc" firstAttribute="top" secondItem="aVI-on-laz" secondAttribute="bottom" constant="8" id="TuC-Hw-U4P"/>
+                                    <constraint firstItem="Ydb-Qq-WBb" firstAttribute="top" secondItem="rTX-DA-nDa" secondAttribute="bottom" constant="8" id="UhT-dQ-x0F"/>
+                                    <constraint firstAttribute="height" constant="303" id="exD-Bx-w7U"/>
+                                    <constraint firstItem="aVI-on-laz" firstAttribute="top" secondItem="Ydb-Qq-WBb" secondAttribute="bottom" constant="32" id="ltM-MA-FrU"/>
+                                    <constraint firstItem="rTX-DA-nDa" firstAttribute="leading" secondItem="pmy-ow-0Yb" secondAttribute="leading" constant="24" id="ocH-BA-Rl3"/>
+                                    <constraint firstAttribute="trailing" secondItem="aVI-on-laz" secondAttribute="trailing" constant="24" id="rEQ-77-QHi"/>
+                                    <constraint firstItem="wwh-vm-2S9" firstAttribute="centerX" secondItem="pmy-ow-0Yb" secondAttribute="centerX" id="uc7-md-jGA"/>
+                                    <constraint firstItem="Ydb-Qq-WBb" firstAttribute="leading" secondItem="pmy-ow-0Yb" secondAttribute="leading" constant="24" id="yIe-vh-Hq8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ImA-qJ-Ehg"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29790976821192056" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ImA-qJ-Ehg" firstAttribute="trailing" secondItem="pmy-ow-0Yb" secondAttribute="trailing" id="T8A-Hx-PYH"/>
+                            <constraint firstItem="pmy-ow-0Yb" firstAttribute="leading" secondItem="ImA-qJ-Ehg" secondAttribute="leading" id="WyY-Wq-Vkg"/>
+                            <constraint firstAttribute="bottom" secondItem="pmy-ow-0Yb" secondAttribute="bottom" id="slb-w6-fyZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="pmy-ow-0Yb" id="ufO-4c-1f6"/>
+                        <outlet property="lineView" destination="wwh-vm-2S9" id="nEv-Gr-Q0W"/>
+                        <outlet property="logOutLabel" destination="rTX-DA-nDa" id="klq-qt-siE"/>
+                        <outlet property="noButton" destination="wjf-oe-zpc" id="jRF-J4-NiA"/>
+                        <outlet property="yesButton" destination="aVI-on-laz" id="gWg-FB-Gma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhR-3K-qVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815" y="1110"/>
         </scene>
         <!--Жеке деректер-->
         <scene sceneID="e7F-4a-mrq">
@@ -519,14 +682,14 @@
                             <constraint firstItem="2sK-Ek-Cpe" firstAttribute="leading" secondItem="3BS-G9-BZa" secondAttribute="leading" constant="24" id="zet-KT-n86"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Жеке деректер" id="L8A-RA-lur"/>
+                    <navigationItem key="navigationItem" title="Жеке деректер" style="editor" id="L8A-RA-lur"/>
                     <connections>
                         <outlet property="saveChangesButton" destination="n7G-0X-99h" id="Y6d-WS-Sh3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Mb-P8-gqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="1849"/>
+            <point key="canvasLocation" x="-1137" y="1850"/>
         </scene>
         <!--Favorites Table View Controller-->
         <scene sceneID="MGK-YL-Nk8">
@@ -710,6 +873,7 @@
         <image name="Avatar" width="104" height="104"/>
         <image name="Check" width="24" height="24"/>
         <image name="Home" width="40" height="40"/>
+        <image name="LogOut" width="24" height="24"/>
         <image name="Play" width="16.333333969116211" height="16"/>
         <image name="Profile" width="40" height="40"/>
         <image name="Search" width="40" height="40"/>

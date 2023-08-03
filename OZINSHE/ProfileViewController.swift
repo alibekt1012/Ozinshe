@@ -31,6 +31,9 @@ class ProfileViewController: UIViewController, LanguageProtocol {
         if let destinationVC = segue.destination as? PersonalDataViewController {
             destinationVC.hidesBottomBarWhenPushed = true
         }
+        if let destinationVC = segue.destination as? ChangePasswordViewController {
+            destinationVC.hidesBottomBarWhenPushed = true
+        }
     }
     
     func configureViews() {
@@ -48,18 +51,30 @@ class ProfileViewController: UIViewController, LanguageProtocol {
         if Localize.currentLanguage() == "ru" {
             languageLabel.text = "Русский"
             personalDataLabel.text = "Править"
+            navigationItem.title = "Профиль"
         }
         if Localize.currentLanguage() == "kk" {
             languageLabel.text = "Қазақша"
             personalDataLabel.text = "Өңдеу"
+            navigationItem.title = "Профиль"
         }
         if Localize.currentLanguage() == "en" {
             languageLabel.text = "English"
             personalDataLabel.text = "Edit"
+            navigationItem.title = "Profile"
         }
         
     }
     
+    @IBAction func logOut(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LogOutViewController") as! LogOutViewController
+        
+        vc.modalPresentationStyle = .overFullScreen
+        
+        present(vc, animated: true)
+        
+    }
     @IBAction func showLanguage(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         
