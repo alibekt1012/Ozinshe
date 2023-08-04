@@ -452,6 +452,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Қүпия сөзді өзгерту" style="editor" id="Bs3-mS-x8r"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="XEc-dd-Kcn" id="Mdy-51-jcD"/>
+                        <outlet property="passwordTextField" destination="yqs-su-XRu" id="6Tk-3Q-FSU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8W-F2-uWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

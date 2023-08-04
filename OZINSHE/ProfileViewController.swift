@@ -86,7 +86,7 @@ class ProfileViewController: UIViewController, LanguageProtocol {
     }
     
     func languageDidChange() {
-        configureViews()
+        configureViews() 
     }
     /*
     // MARK: - Navigation
