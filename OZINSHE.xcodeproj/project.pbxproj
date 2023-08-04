@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D116BFC2A7B899200E01570 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D116BFB2A7B899200E01570 /* ChangePasswordViewController.swift */; };
+		1D116C002A7D48B100E01570 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D116BFF2A7D48B100E01570 /* TextFieldWithPadding.swift */; };
+		1D116C042A7D498C00E01570 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D116C032A7D498C00E01570 /* SignInViewController.swift */; };
 		1D2C52342A7A2E0400EB6A24 /* PersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C52332A7A2E0400EB6A24 /* PersonalDataViewController.swift */; };
 		1D2C52362A7A8A0800EB6A24 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C52352A7A8A0800EB6A24 /* LogOutViewController.swift */; };
 		1D5F93202A6A9E3200A4EECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F931F2A6A9E3200A4EECF /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		00614CC15507736AFF21919E /* Pods-OZINSHE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OZINSHE.debug.xcconfig"; path = "Target Support Files/Pods-OZINSHE/Pods-OZINSHE.debug.xcconfig"; sourceTree = "<group>"; };
 		1D116BFB2A7B899200E01570 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		1D116BFF2A7D48B100E01570 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
+		1D116C032A7D498C00E01570 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1D2C52332A7A2E0400EB6A24 /* PersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewController.swift; sourceTree = "<group>"; };
 		1D2C52352A7A8A0800EB6A24 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
 		1D5F931C2A6A9E3200A4EECF /* OZINSHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OZINSHE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D116C012A7D492400E01570 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D116C022A7D495400E01570 /* Profile */,
+				1D116C032A7D498C00E01570 /* SignInViewController.swift */,
+				1D5F93332A6AA24600A4EECF /* TabBar.swift */,
+				1D5F93232A6A9E3200A4EECF /* ViewController.swift */,
+				1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */,
+				1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D116C022A7D495400E01570 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1D66B9B52A7406B000D4F6ED /* LanguageViewController.swift */,
+				1D66B9B32A74067700D4F6ED /* ProfileViewController.swift */,
+				1D2C52332A7A2E0400EB6A24 /* PersonalDataViewController.swift */,
+				1D2C52352A7A8A0800EB6A24 /* LogOutViewController.swift */,
+				1D116BFB2A7B899200E01570 /* ChangePasswordViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		1D5F93132A6A9E3200A4EECF = {
 			isa = PBXGroup;
 			children = (
@@ -90,22 +119,15 @@
 			isa = PBXGroup;
 			children = (
 				1D5F933B2A6AC14500A4EECF /* Fonts */,
+				1D116C012A7D492400E01570 /* Controllers */,
 				1D5F931F2A6A9E3200A4EECF /* AppDelegate.swift */,
-				1D5F93332A6AA24600A4EECF /* TabBar.swift */,
 				1D5F93212A6A9E3200A4EECF /* SceneDelegate.swift */,
-				1D5F93232A6A9E3200A4EECF /* ViewController.swift */,
 				1D5F93252A6A9E3200A4EECF /* Main.storyboard */,
 				1D5F93282A6A9E3300A4EECF /* Assets.xcassets */,
 				1D5F932A2A6A9E3300A4EECF /* LaunchScreen.storyboard */,
 				1D5F932D2A6A9E3300A4EECF /* Info.plist */,
-				1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */,
-				1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */,
-				1D66B9B32A74067700D4F6ED /* ProfileViewController.swift */,
 				1D66B9BB2A77F21A00D4F6ED /* Localizable.strings */,
-				1D66B9B52A7406B000D4F6ED /* LanguageViewController.swift */,
-				1D2C52332A7A2E0400EB6A24 /* PersonalDataViewController.swift */,
-				1D2C52352A7A8A0800EB6A24 /* LogOutViewController.swift */,
-				1D116BFB2A7B899200E01570 /* ChangePasswordViewController.swift */,
+				1D116BFF2A7D48B100E01570 /* TextFieldWithPadding.swift */,
 			);
 			path = OZINSHE;
 			sourceTree = "<group>";
@@ -259,9 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D116BFC2A7B899200E01570 /* ChangePasswordViewController.swift in Sources */,
+				1D116C002A7D48B100E01570 /* TextFieldWithPadding.swift in Sources */,
 				1D5F93242A6A9E3200A4EECF /* ViewController.swift in Sources */,
 				1D5F93202A6A9E3200A4EECF /* AppDelegate.swift in Sources */,
 				1D2C52342A7A2E0400EB6A24 /* PersonalDataViewController.swift in Sources */,
+				1D116C042A7D498C00E01570 /* SignInViewController.swift in Sources */,
 				1D66B9B62A7406B000D4F6ED /* LanguageViewController.swift in Sources */,
 				1D5F933F2A6AC9DF00A4EECF /* MovieTableViewCell.swift in Sources */,
 				1D5F93222A6A9E3200A4EECF /* SceneDelegate.swift in Sources */,
