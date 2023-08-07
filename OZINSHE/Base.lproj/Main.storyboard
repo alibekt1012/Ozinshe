@@ -853,6 +853,10 @@
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditingDidBegin:" destination="SIG-z4-6yl" eventType="editingDidBegin" id="HU2-Ve-DFH"/>
+                                    <action selector="textFieldEditingDidEnd:" destination="SIG-z4-6yl" eventType="editingDidEnd" id="CrP-15-I8D"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-36-JdC" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
                                 <rect key="frame" x="24" y="305.66666666666669" width="345" height="56"/>
@@ -862,6 +866,10 @@
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <action selector="textFieldEditingDidBegin:" destination="SIG-z4-6yl" eventType="editingDidBegin" id="6Bz-dG-KAh"/>
+                                    <action selector="textFieldEditingDidEnd:" destination="SIG-z4-6yl" eventType="editingDidEnd" id="6ti-DU-2Hq"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-Uf-kz3">
                                 <rect key="frame" x="24" y="284.66666666666669" width="345" height="17"/>
