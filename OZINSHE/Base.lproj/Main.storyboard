@@ -801,7 +801,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igF-X8-cad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.4045801526718" y="357.74647887323948"/>
+            <point key="canvasLocation" x="815" y="342"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AgP-ls-0LS">
@@ -817,7 +817,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mah-UY-YdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1118" y="-680"/>
+            <point key="canvasLocation" x="-24" y="-1127"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="etE-ZP-sjy">
@@ -929,16 +929,16 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEc-zi-CTm">
-                                <rect key="frame" x="82.333333333333329" y="519.66666666666663" width="228.66666666666669" height="22"/>
+                                <rect key="frame" x="89.000000000000014" y="519.66666666666663" width="215.33333333333337" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аккаунтыныз жоқ па? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-MW-dks">
-                                        <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="137.33333333333334" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                         <color key="textColor" red="0.41960784313725491" green="0.44705882352941173" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4Y-QM-zQp">
-                                        <rect key="frame" x="148.66666666666669" y="0.0" width="80" height="22"/>
+                                        <rect key="frame" x="137.33333333333334" y="0.0" width="78" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" Registration">
@@ -1126,16 +1126,16 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-0l-dpk">
-                                <rect key="frame" x="95.666666666666671" y="569.66666666666663" width="201.66666666666663" height="22"/>
+                                <rect key="frame" x="101.00000000000001" y="569.66666666666663" width="191.33333333333337" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сізде аккаунт бар ма?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-P7-C11">
-                                        <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138.33333333333334" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                         <color key="textColor" red="0.41960784313725491" green="0.44705882352941173" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-z3-PeB">
-                                        <rect key="frame" x="147.66666666666669" y="0.0" width="54" height="22"/>
+                                        <rect key="frame" x="138.33333333333334" y="0.0" width="53" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" Тіркелу">
@@ -1248,7 +1248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588.54961832061065" y="-320.42253521126764"/>
+            <point key="canvasLocation" x="815" y="-516"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pUF-Ob-Pgl">
@@ -1290,19 +1290,19 @@
     </scenes>
     <designables>
         <designable name="9MK-Um-Myt">
-            <size key="intrinsicContentSize" width="148" height="19"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
         <designable name="H21-hK-MIN">
-            <size key="intrinsicContentSize" width="148" height="19"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
         <designable name="RSh-Yo-w0A">
-            <size key="intrinsicContentSize" width="88" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
         </designable>
         <designable name="byh-Hz-LKx">
-            <size key="intrinsicContentSize" width="88" height="20.333333333333332"/>
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
         </designable>
         <designable name="cA2-36-JdC">
-            <size key="intrinsicContentSize" width="148" height="19"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
     </designables>
     <resources>

@@ -80,10 +80,10 @@ class SignInViewController: UIViewController {
             SVProgressHUD.dismiss()
             
             var resultString = ""
-                        if let data = response.data {
-                            resultString = String(data: data, encoding: .utf8)!
-                            print(resultString)
-                        }
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
             
             if response.response?.statusCode == 200 {
                 let json = JSON(response.data!)
@@ -94,8 +94,8 @@ class SignInViewController: UIViewController {
                     self.startApp()
                 }
                 else {
-                                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
-                                }
+                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                }
             } else {
                 var ErrorString = "CONNECTION_ERROR".localized()
                 if let sCode = response.response?.statusCode {
