@@ -1,22 +1,26 @@
 //
-//  SignInViewController.swift
+//  SignUpViewController.swift
 //  OZINSHE
 //
-//  Created by Almat Alibekov on 04.08.2023.
+//  Created by Almat Alibekov on 07.08.2023.
 //
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignUpViewController: UIViewController {
+
     @IBOutlet var emailTextField: TextFieldWithPadding!
     
     @IBOutlet var passwordTextField: TextFieldWithPadding!
     
-    @IBOutlet var signInButton: UIButton!
+    @IBOutlet var repeatPasswordTextField: TextFieldWithPadding!
+    
+    @IBOutlet var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         emailTextField.layer.cornerRadius = 12
         emailTextField.layer.borderWidth = 1
         emailTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
@@ -25,7 +29,11 @@ class SignInViewController: UIViewController {
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
-        signInButton.layer.cornerRadius = 12
+        repeatPasswordTextField.layer.cornerRadius = 12
+        repeatPasswordTextField.layer.borderWidth = 1
+        repeatPasswordTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+        
+        signUpButton.layer.cornerRadius = 12
     }
     
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SIG-z4-6yl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UOh-lI-A16">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -406,7 +406,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-ku-6kg">
-                                <rect key="frame" x="23.999999999999996" y="124" width="62.666666666666657" height="17"/>
+                                <rect key="frame" x="24" y="124" width="62" height="17"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -416,7 +416,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="7HM-mR-HcR"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -481,19 +480,19 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Шығу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTX-DA-nDa">
-                                        <rect key="frame" x="24" y="57.999999999999993" width="66" height="28.666666666666664"/>
+                                        <rect key="frame" x="24" y="58" width="66" height="28"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                         <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сіз шынымен аккаунтыныздан " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydb-Qq-WBb">
-                                        <rect key="frame" x="23.999999999999986" y="94.666666666666629" width="218.66666666666663" height="20.333333333333329"/>
+                                        <rect key="frame" x="23.999999999999986" y="94" width="218.66666666666663" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                         <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVI-on-laz">
-                                        <rect key="frame" x="24" y="147" width="345" height="56"/>
+                                        <rect key="frame" x="24" y="144.66666666666663" width="345" height="56"/>
                                         <color key="backgroundColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="8OX-gN-5vf"/>
@@ -505,7 +504,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjf-oe-zpc">
-                                        <rect key="frame" x="24" y="211" width="345" height="56"/>
+                                        <rect key="frame" x="24" y="208.66666666666663" width="345" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="Vl1-Qp-hqc"/>
                                         </constraints>
@@ -620,7 +619,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Туылған күні" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-y4-heR">
-                                <rect key="frame" x="24" y="397" width="87" height="17"/>
+                                <rect key="frame" x="23.999999999999993" y="397" width="86.333333333333314" height="17"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -802,7 +801,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igF-X8-cad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512.2137404580152" y="357.74647887323948"/>
+            <point key="canvasLocation" x="1437.4045801526718" y="357.74647887323948"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AgP-ls-0LS">
@@ -829,25 +828,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сәлем" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqD-kh-02i">
-                                <rect key="frame" x="24" y="75" width="345" height="27.666666666666671"/>
+                                <rect key="frame" x="24" y="119.00000000000001" width="345" height="27.666666666666671"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аккаунтқа кіріңіз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHJ-fZ-Xg8">
-                                <rect key="frame" x="24" y="102.66666666666667" width="345" height="20"/>
+                                <rect key="frame" x="24" y="146.66666666666666" width="345" height="20"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                 <color key="textColor" red="0.41960784313725491" green="0.44705882352941173" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyD-pD-MGw">
-                                <rect key="frame" x="24" y="151.66666666666666" width="345" height="17"/>
+                                <rect key="frame" x="24" y="195.66666666666666" width="345" height="17"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byh-Hz-LKx" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
-                                <rect key="frame" x="24" y="172.66666666666666" width="345" height="56"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byh-Hz-LKx" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
+                                <rect key="frame" x="24" y="216.66666666666666" width="345" height="55.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ocP-32-yg7"/>
                                 </constraints>
@@ -855,8 +854,8 @@
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-36-JdC" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
-                                <rect key="frame" x="24" y="261.66666666666669" width="345" height="56"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-36-JdC" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
+                                <rect key="frame" x="24" y="305.66666666666669" width="345" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="hKX-gP-3WA"/>
                                 </constraints>
@@ -865,27 +864,27 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-Uf-kz3">
-                                <rect key="frame" x="24" y="240.66666666666666" width="345" height="16.999999999999972"/>
+                                <rect key="frame" x="24" y="284.66666666666669" width="345" height="17"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="EFO-3Z-uNQ">
-                                <rect key="frame" x="40" y="190.66666666666666" width="20" height="20"/>
+                                <rect key="frame" x="40" y="234.66666666666666" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="4XY-K7-AlE"/>
                                     <constraint firstAttribute="height" constant="20" id="KkG-u8-Vux"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="Xif-1L-jc5">
-                                <rect key="frame" x="40" y="279.66666666666669" width="20" height="20"/>
+                                <rect key="frame" x="40" y="323.66666666666669" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Lzv-G5-5cs"/>
                                     <constraint firstAttribute="width" constant="20" id="fBO-AQ-e6g"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWd-g5-FAj">
-                                <rect key="frame" x="317" y="261.66666666666669" width="52" height="56"/>
+                                <rect key="frame" x="317" y="305.66666666666669" width="52" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="OCv-lr-HCp"/>
                                 </constraints>
@@ -893,7 +892,7 @@
                                 <state key="normal" image="Show"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaF-qo-KDx">
-                                <rect key="frame" x="24" y="334.66666666666669" width="345" height="22"/>
+                                <rect key="frame" x="24" y="378.66666666666669" width="345" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="4bL-Wr-Y4Z"/>
                                 </constraints>
@@ -904,7 +903,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgh-af-Hbr">
-                                <rect key="frame" x="24" y="396.66666666666669" width="345" height="56"/>
+                                <rect key="frame" x="24" y="440.66666666666669" width="345" height="56"/>
                                 <color key="backgroundColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="HPv-ot-erb"/>
@@ -916,7 +915,7 @@
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEc-zi-CTm">
-                                <rect key="frame" x="88.666666666666686" y="476.66666666666669" width="216" height="22"/>
+                                <rect key="frame" x="88.666666666666686" y="520.66666666666663" width="216" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Аккаунтыныз жоқ па? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-MW-dks">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="22"/>
@@ -931,6 +930,9 @@
                                         <state key="normal" title=" Registration">
                                             <color key="titleColor" red="0.70196078429999997" green="0.46274509800000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="dKF-AC-eAv" kind="show" id="4mq-Ws-G9e"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -984,10 +986,219 @@
                             <constraint firstItem="thy-Xb-Eh1" firstAttribute="trailing" secondItem="vgh-af-Hbr" secondAttribute="trailing" constant="24" id="zvU-on-WZd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oDH-gh-gci"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="byh-Hz-LKx" id="gSL-0h-key"/>
+                        <outlet property="passwordTextField" destination="cA2-36-JdC" id="8Vx-xM-idf"/>
+                        <outlet property="signInButton" destination="vgh-af-Hbr" id="EBN-22-ZiB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qt1-8t-Waq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3081.679389312977" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="-2971.7557251908397" y="-13.380281690140846"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="h9T-Ss-CMB">
+            <objects>
+                <viewController id="dKF-AC-eAv" customClass="SignUpViewController" customModule="OZINSHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Op6-CM-swB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тіркелу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv8-De-UHU">
+                                <rect key="frame" x="24" y="119" width="345" height="29"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Деректерді толтырыңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hI-HK-B0z">
+                                <rect key="frame" x="24" y="148" width="345" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                <color key="textColor" red="0.41960784313725491" green="0.44705882352941173" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCT-9t-xyV">
+                                <rect key="frame" x="24" y="197" width="345" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSh-Yo-w0A" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
+                                <rect key="frame" x="24" y="218" width="345" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="JvU-sx-UAS"/>
+                                </constraints>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email" translatesAutoresizingMaskIntoConstraints="NO" id="2lc-Kq-z6b">
+                                <rect key="frame" x="40" y="236" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6tU-Pk-qQf"/>
+                                    <constraint firstAttribute="width" constant="20" id="rdx-l3-MWt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ae-gK-Ya8">
+                                <rect key="frame" x="24" y="286" width="345" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9MK-Um-Myt" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
+                                <rect key="frame" x="24" y="307" width="345" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="omo-La-DHk"/>
+                                </constraints>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgX-KU-hbL">
+                                <rect key="frame" x="317" y="307" width="52" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="H2P-iA-Qco"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Show"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-bC-4FP">
+                                <rect key="frame" x="40" y="325" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1yH-WZ-QF6"/>
+                                    <constraint firstAttribute="width" constant="20" id="PRa-Z3-rwJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөзді қайталаңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APy-YC-lYV">
+                                <rect key="frame" x="24" y="375" width="345" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H21-hK-MIN" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
+                                <rect key="frame" x="24" y="396" width="345" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="J5M-t4-iOw"/>
+                                </constraints>
+                                <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="USU-iG-dNF">
+                                <rect key="frame" x="40" y="414" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="b0y-kY-7PR"/>
+                                    <constraint firstAttribute="width" constant="20" id="yh8-Y1-ApE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oha-ca-5gy">
+                                <rect key="frame" x="317" y="396" width="52" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="am7-Gz-Prz"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Show"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9b-Bb-buG">
+                                <rect key="frame" x="24" y="492" width="345" height="56"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.1764705882" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="iQb-zf-uHK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Тіркелу">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-0l-dpk">
+                                <rect key="frame" x="100.66666666666669" y="572" width="192" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сізде аккаунт бар ма?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVj-P7-C11">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="22"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                        <color key="textColor" red="0.41960784313725491" green="0.44705882352941173" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-z3-PeB">
+                                        <rect key="frame" x="139" y="0.0" width="53" height="22"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Тіркелу">
+                                            <color key="titleColor" red="0.70196078431372544" green="0.46274509803921571" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TiD-z3-PeB" firstAttribute="top" secondItem="y5o-0l-dpk" secondAttribute="top" id="69M-Uz-TUM"/>
+                                    <constraint firstItem="TiD-z3-PeB" firstAttribute="leading" secondItem="QVj-P7-C11" secondAttribute="trailing" id="6fn-9G-Ylm"/>
+                                    <constraint firstItem="QVj-P7-C11" firstAttribute="top" secondItem="y5o-0l-dpk" secondAttribute="top" id="IIV-eY-JXu"/>
+                                    <constraint firstItem="QVj-P7-C11" firstAttribute="leading" secondItem="y5o-0l-dpk" secondAttribute="leading" id="buP-pB-mLb"/>
+                                    <constraint firstAttribute="bottom" secondItem="QVj-P7-C11" secondAttribute="bottom" id="fNt-M6-cKO"/>
+                                    <constraint firstAttribute="bottom" secondItem="TiD-z3-PeB" secondAttribute="bottom" id="op1-MU-cCx"/>
+                                    <constraint firstAttribute="trailing" secondItem="TiD-z3-PeB" secondAttribute="trailing" id="uf5-7k-PqJ"/>
+                                    <constraint firstAttribute="height" constant="22" id="yyv-1g-FGn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1ND-P7-KUt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oha-ca-5gy" firstAttribute="bottom" secondItem="H21-hK-MIN" secondAttribute="bottom" id="1MN-0W-dQa"/>
+                            <constraint firstItem="USU-iG-dNF" firstAttribute="centerY" secondItem="H21-hK-MIN" secondAttribute="centerY" id="1dR-3b-5nY"/>
+                            <constraint firstItem="dgX-KU-hbL" firstAttribute="top" secondItem="9MK-Um-Myt" secondAttribute="top" id="57g-Az-VfU"/>
+                            <constraint firstItem="y5o-0l-dpk" firstAttribute="centerX" secondItem="Op6-CM-swB" secondAttribute="centerX" id="5Xo-1P-mwV"/>
+                            <constraint firstItem="7hI-HK-B0z" firstAttribute="top" secondItem="mv8-De-UHU" secondAttribute="bottom" id="7Dh-ZW-Cie"/>
+                            <constraint firstItem="d9b-Bb-buG" firstAttribute="top" secondItem="H21-hK-MIN" secondAttribute="bottom" constant="40" id="7Tf-AR-tJe"/>
+                            <constraint firstItem="9MK-Um-Myt" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="9xh-HH-Goj"/>
+                            <constraint firstItem="H21-hK-MIN" firstAttribute="top" secondItem="APy-YC-lYV" secondAttribute="bottom" constant="4" id="9xz-vL-Xy8"/>
+                            <constraint firstItem="RSh-Yo-w0A" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="ALs-UC-sJ6"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="H21-hK-MIN" secondAttribute="trailing" constant="24" id="BkA-uf-KdY"/>
+                            <constraint firstItem="dgX-KU-hbL" firstAttribute="bottom" secondItem="9MK-Um-Myt" secondAttribute="bottom" id="C8Z-vk-6fH"/>
+                            <constraint firstItem="y5o-0l-dpk" firstAttribute="top" secondItem="d9b-Bb-buG" secondAttribute="bottom" constant="24" id="EKc-k3-0Bs"/>
+                            <constraint firstItem="dgX-KU-hbL" firstAttribute="trailing" secondItem="9MK-Um-Myt" secondAttribute="trailing" id="FA6-vw-Mbl"/>
+                            <constraint firstItem="mv8-De-UHU" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="FsF-XF-b99"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="4ae-gK-Ya8" secondAttribute="trailing" constant="24" id="GYr-2f-MGz"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="APy-YC-lYV" secondAttribute="trailing" constant="24" id="I33-v1-JUx"/>
+                            <constraint firstItem="IX1-bC-4FP" firstAttribute="centerY" secondItem="9MK-Um-Myt" secondAttribute="centerY" id="Icb-4Y-Bbe"/>
+                            <constraint firstItem="gCT-9t-xyV" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="K9v-jj-tMJ"/>
+                            <constraint firstItem="USU-iG-dNF" firstAttribute="leading" secondItem="H21-hK-MIN" secondAttribute="leading" constant="16" id="LCB-fj-EHW"/>
+                            <constraint firstItem="2lc-Kq-z6b" firstAttribute="centerY" secondItem="RSh-Yo-w0A" secondAttribute="centerY" id="LkG-Um-53f"/>
+                            <constraint firstItem="4ae-gK-Ya8" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="LsF-sW-KGJ"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="mv8-De-UHU" secondAttribute="trailing" constant="24" id="Nse-ON-eJz"/>
+                            <constraint firstItem="9MK-Um-Myt" firstAttribute="top" secondItem="4ae-gK-Ya8" secondAttribute="bottom" constant="4" id="UZE-N6-sAX"/>
+                            <constraint firstItem="mv8-De-UHU" firstAttribute="top" secondItem="1ND-P7-KUt" secondAttribute="top" constant="16" id="VJu-DU-r2o"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="RSh-Yo-w0A" secondAttribute="trailing" constant="24" id="WYX-29-NoC"/>
+                            <constraint firstItem="7hI-HK-B0z" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="Xbf-QO-FIh"/>
+                            <constraint firstItem="d9b-Bb-buG" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="Yyv-mN-MAh"/>
+                            <constraint firstItem="oha-ca-5gy" firstAttribute="trailing" secondItem="H21-hK-MIN" secondAttribute="trailing" id="cjP-lT-rbC"/>
+                            <constraint firstItem="gCT-9t-xyV" firstAttribute="top" secondItem="7hI-HK-B0z" secondAttribute="bottom" constant="29" id="dXO-tz-cNg"/>
+                            <constraint firstItem="APy-YC-lYV" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="exT-CI-DjR"/>
+                            <constraint firstItem="4ae-gK-Ya8" firstAttribute="top" secondItem="RSh-Yo-w0A" secondAttribute="bottom" constant="12" id="f7k-ST-XVq"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="7hI-HK-B0z" secondAttribute="trailing" constant="24" id="h4z-LP-W6c"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="gCT-9t-xyV" secondAttribute="trailing" constant="24" id="iFV-4m-LoG"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="9MK-Um-Myt" secondAttribute="trailing" constant="24" id="kG3-V2-99T"/>
+                            <constraint firstItem="H21-hK-MIN" firstAttribute="leading" secondItem="1ND-P7-KUt" secondAttribute="leading" constant="24" id="klU-kd-B6C"/>
+                            <constraint firstItem="oha-ca-5gy" firstAttribute="top" secondItem="H21-hK-MIN" secondAttribute="top" id="ls2-cV-1Vw"/>
+                            <constraint firstItem="IX1-bC-4FP" firstAttribute="leading" secondItem="9MK-Um-Myt" secondAttribute="leading" constant="16" id="mal-K1-jz8"/>
+                            <constraint firstItem="RSh-Yo-w0A" firstAttribute="top" secondItem="gCT-9t-xyV" secondAttribute="bottom" constant="4" id="mzw-e0-i5F"/>
+                            <constraint firstItem="APy-YC-lYV" firstAttribute="top" secondItem="9MK-Um-Myt" secondAttribute="bottom" constant="12" id="p1B-kA-WDB"/>
+                            <constraint firstItem="2lc-Kq-z6b" firstAttribute="leading" secondItem="RSh-Yo-w0A" secondAttribute="leading" constant="16" id="qi8-rT-xmi"/>
+                            <constraint firstItem="1ND-P7-KUt" firstAttribute="trailing" secondItem="d9b-Bb-buG" secondAttribute="trailing" constant="24" id="zes-pJ-SNd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" style="editor" id="umw-4l-3Ow"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="RSh-Yo-w0A" id="L8q-TX-vXP"/>
+                        <outlet property="passwordTextField" destination="9MK-Um-Myt" id="tqP-Ok-eXg"/>
+                        <outlet property="repeatPasswordTextField" destination="H21-hK-MIN" id="4kI-yn-suB"/>
+                        <outlet property="signUpButton" destination="d9b-Bb-buG" id="XcZ-pm-E1J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THg-gX-ysp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2043.5114503816792" y="-13.380281690140846"/>
         </scene>
         <!--Tab Bar-->
         <scene sceneID="dmb-dd-Abn">
@@ -1007,7 +1218,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0p-jc-Ku5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1897" y="-13"/>
+            <point key="canvasLocation" x="-971.7557251908396" y="-13.380281690140846"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1023,7 +1234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338" y="-320"/>
+            <point key="canvasLocation" x="588.54961832061065" y="-320.42253521126764"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pUF-Ob-Pgl">
@@ -1044,13 +1255,40 @@
             </objects>
             <point key="canvasLocation" x="-1118" y="1110"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GmV-3D-ABS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UOh-lI-A16" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rUr-uv-2C0">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SIG-z4-6yl" kind="relationship" relationship="rootViewController" id="jmI-C3-emo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lXV-2f-CfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3898.4732824427479" y="-13.380281690140846"/>
+        </scene>
     </scenes>
     <designables>
+        <designable name="9MK-Um-Myt">
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+        </designable>
+        <designable name="H21-hK-MIN">
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+        </designable>
+        <designable name="RSh-Yo-w0A">
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
+        </designable>
         <designable name="byh-Hz-LKx">
-            <size key="intrinsicContentSize" width="115.66666666666667" height="34"/>
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
         </designable>
         <designable name="cA2-36-JdC">
-            <size key="intrinsicContentSize" width="175.66666666666666" height="34"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
     </designables>
     <resources>
