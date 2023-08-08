@@ -12,12 +12,17 @@ import SDWebImage
 import SwiftyJSON
 
 class SignInViewController: UIViewController {
+    
+    var validation = Validation()
+    
     @IBOutlet var emailTextField: TextFieldWithPadding!
-    
     @IBOutlet var passwordTextField: TextFieldWithPadding!
-    
     @IBOutlet var signInButton: UIButton!
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var passwordLabel: UILabel!
     
+    var validationLabel = UILabel()
+       
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -104,6 +109,13 @@ class SignInViewController: UIViewController {
                 ErrorString = ErrorString + " \(resultString)"
                 SVProgressHUD.showError(withStatus: "\(ErrorString)")
             }
+        }
+        
+        let isValidateEmail = self.validation.validateEmailId(emailID: email)
+        if isValidateEmail == false {
+            print("Incorrect email")
+            validationLabel.isHidden = false
+            return
         }
     }
     
