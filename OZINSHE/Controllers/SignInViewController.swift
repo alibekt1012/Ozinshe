@@ -20,8 +20,11 @@ class SignInViewController: UIViewController {
     @IBOutlet var signInButton: UIButton!
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var passwordLabel: UILabel!
+    @IBOutlet var validationLabel: UILabel!
+    @IBOutlet var passwordLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet var wrongEmailLabelTopConstraint: NSLayoutConstraint!
     
-    var validationLabel = UILabel()
+    
        
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,8 @@ class SignInViewController: UIViewController {
         passwordTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
         signInButton.layer.cornerRadius = 12
+        
+        validationLabel.isHidden = true
     }
     
     
@@ -75,8 +80,21 @@ class SignInViewController: UIViewController {
         
         let email = emailTextField.text!
         let password = passwordTextField.text!
+        let isValidateEmail = self.validation.validateEmailId(emailID: email)
         
         if email.isEmpty || password.isEmpty {
+            SVProgressHUD.dismiss()
+            validationLabel.text = "Please fill all required fields"
+            passwordLabelTopConstraint.constant = 46
+            validationLabel.isHidden = false
+            return
+        }
+        if isValidateEmail == false {
+            SVProgressHUD.dismiss()
+            emailTextField.layer.borderColor = UIColor(red: 1.00, green: 0.25, blue: 0.17, alpha: 1.00).cgColor
+            passwordLabelTopConstraint.constant = 46
+            validationLabel.text = "Қате формат"
+            validationLabel.isHidden = false
             return
         }
         let parameters = ["email": email, "password": password]
@@ -109,13 +127,6 @@ class SignInViewController: UIViewController {
                 ErrorString = ErrorString + " \(resultString)"
                 SVProgressHUD.showError(withStatus: "\(ErrorString)")
             }
-        }
-        
-        let isValidateEmail = self.validation.validateEmailId(emailID: email)
-        if isValidateEmail == false {
-            print("Incorrect email")
-            validationLabel.isHidden = false
-            return
         }
     }
     

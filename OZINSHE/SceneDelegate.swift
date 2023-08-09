@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 //        guard let _ = (scene as? UIWindowScene) else { return }
         
-        //UserDefaults.standard.removeObject(forKey: "accessToken")
+        UserDefaults.standard.removeObject(forKey: "accessToken")
         
         if let windowScene = scene as? UIWindowScene {
                     if let accessToken = UserDefaults.standard.string(forKey: "accessToken") {
