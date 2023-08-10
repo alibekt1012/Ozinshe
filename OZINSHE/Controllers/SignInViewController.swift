@@ -10,11 +10,14 @@ import Alamofire
 import SVProgressHUD
 import SDWebImage
 import SwiftyJSON
+import Localize_Swift
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, LanguageProtocol {
     
     var validation = Validation()
     
+    @IBOutlet var greetingsLabel: UILabel!
+    @IBOutlet var logInLabel: UILabel!
     @IBOutlet var emailTextField: TextFieldWithPadding!
     @IBOutlet var passwordTextField: TextFieldWithPadding!
     @IBOutlet var signInButton: UIButton!
@@ -23,9 +26,10 @@ class SignInViewController: UIViewController {
     @IBOutlet var validationLabel: UILabel!
     @IBOutlet var passwordLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet var wrongEmailLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet var forgotPasswordButton: UIButton!
+    @IBOutlet var noAccountLabel: UILabel!
+    @IBOutlet var registrationButton: UIButton!
     
-    
-       
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,19 +39,37 @@ class SignInViewController: UIViewController {
     }
     
     func configureViews() {
+        
+        greetingsLabel.text = "HELLO".localized()
+        logInLabel.text = "LOG_IN".localized()
+        
+        emailTextField.placeholder = "EMAIL_PLACEHOLDER".localized()
         emailTextField.layer.cornerRadius = 12
         emailTextField.layer.borderWidth = 1
         emailTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
+        passwordLabel.text = "PASSWORD".localized()
+        
+        passwordTextField.placeholder = "PASSWORD_PLACEHOLDER".localized()
         passwordTextField.layer.cornerRadius = 12
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
+        forgotPasswordButton.setTitle("FORGOT_PASSWORD".localized(), for: .normal)
+        
+        
         signInButton.layer.cornerRadius = 12
+        signInButton.setTitle("SIGN_IN".localized(), for: .normal)
+        
+        noAccountLabel.text = "DO_NOT_HAVE_AN_ACCOUNT".localized()
+        registrationButton.setTitle("REGISTRATION".localized(), for: .normal)
         
         validationLabel.isHidden = true
     }
     
+    func languageDidChange() {
+        configureViews()
+    }
     
     
     func keyboardWhenTappedAround() {

@@ -1013,9 +1013,14 @@
                     <connections>
                         <outlet property="emailLabel" destination="TyD-pD-MGw" id="3X2-ln-JvL"/>
                         <outlet property="emailTextField" destination="byh-Hz-LKx" id="Wv1-gq-jeG"/>
+                        <outlet property="forgotPasswordButton" destination="jaF-qo-KDx" id="bRs-TD-Bss"/>
+                        <outlet property="greetingsLabel" destination="HqD-kh-02i" id="mv2-a8-kcV"/>
+                        <outlet property="logInLabel" destination="QHJ-fZ-Xg8" id="EvM-F7-Kfs"/>
+                        <outlet property="noAccountLabel" destination="4hf-MW-dks" id="3Bl-6A-L21"/>
                         <outlet property="passwordLabel" destination="Gis-Uf-kz3" id="6Iv-iK-tqX"/>
                         <outlet property="passwordLabelTopConstraint" destination="D3O-MJ-yNY" id="Dr6-eb-Nua"/>
                         <outlet property="passwordTextField" destination="cA2-36-JdC" id="8Vx-xM-idf"/>
+                        <outlet property="registrationButton" destination="V4Y-QM-zQp" id="jce-Vi-gIF"/>
                         <outlet property="signInButton" destination="vgh-af-Hbr" id="EBN-22-ZiB"/>
                         <outlet property="validationLabel" destination="4ca-X6-g3A" id="R9B-s1-gY5"/>
                         <outlet property="wrongEmailLabelTopConstraint" destination="Uiz-bU-efi" id="JTz-76-21y"/>

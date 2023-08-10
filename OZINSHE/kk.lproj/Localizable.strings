@@ -5,6 +5,7 @@
   Created by Almat Alibekov on 31.07.2023.
   
 */
+// Profile
 "MY_PROFILE" = "Менің профилім";
 "LANGUAGE" = "Тіл";
 "PERSONAL_DATA" = "Жеке деректер";
@@ -12,3 +13,15 @@
 "TERMS_AND_CONDITIONS" = "Ережелер мен шарттар";
 "NOTIFICATIONS" = "Хабарландырулар";
 "DARK_MODE" = "Қараңғы режим";
+
+// Sign In / Sign Up
+"HELLO" = "Сәлем";
+"LOG_IN" = "Аккаунтқа кіріңіз";
+"EMAIL_PLACEHOLDER" = "Сіздің email";
+"PASSWORD" = "Құпия сөз";
+"PASSWORD_PLACEHOLDER" = "Сіздің құпия сөзіңіз";
+"FORGOT_PASSWORD" = "Құпия сөзді ұмыттыңыз ба?";
+"SIGN_IN" = "Кіру";
+"DO_NOT_HAVE_AN_ACCOUNT" = "Аккаунтыныз жоқ па?";
+"REGISTRATION" = " Тіркелу";
+
