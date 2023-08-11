@@ -98,6 +98,8 @@ class SignInViewController: UIViewController, LanguageProtocol {
     }
     
     @IBAction func signIn(_ sender: Any) {
+        passwordLabelTopConstraint.constant = 12
+        validationLabel.isHidden = true
         SVProgressHUD.show()
         
         let email = emailTextField.text!

@@ -76,6 +76,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: Any) {
+        signUpButtonTopConstraint.constant = 40
+        validationLabel.isHidden = true
         SVProgressHUD.show()
         
         let email = emailTextField.text!

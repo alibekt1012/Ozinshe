@@ -24,3 +24,4 @@
 "SIGN_IN" = "Войти";
 "DO_NOT_HAVE_AN_ACCOUNT" = "Отсутствует аккаунт?";
 "REGISTRATION" = " Зарегистрироваться";
+"REPEAT_PASSWORD" = "Повторите пароль";
