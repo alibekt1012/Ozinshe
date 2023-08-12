@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieTableViewCell: UITableViewCell {
 
@@ -25,6 +26,13 @@ class MovieTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(movie: Movie) {
+        nameLabel.text = movie.name
+        yearLabel.text = "\(movie.year)"
+        posterImageView.sd_setImage(with: URL(string: movie.poster_link))
+        
     }
 
 }

@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import SVProgressHUD
 
 class FavoritesTableViewController: UITableViewController {
     
-    var array = [1,2,3]
+    var favorites: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,47 @@ class FavoritesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        downloadFavorites()
+    }
+    
+    func downloadFavorites() {
+        SVProgressHUD.show()
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        AF.request("http://api.ozinshe.com/core/V1/favorite/", method: .get, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
+            
+            if response.response?.statusCode == 200 {
+                let json = JSON(response.data!)
+                
+                if let array = json.array {
+                    for item in array {
+                        let movie = Movie(json: item)
+                        self.favorites.append(movie)
+                    }
+                    self.tableView.reloadData()
+                } else {
+                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                }
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+            }
+            
+        }
     }
 
     // MARK: - Table view data source
@@ -31,15 +75,16 @@ class FavoritesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return array.count
+        return favorites.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
 
         // Configure the cell...
-
+        cell.setData(movie: favorites[indexPath.row])
+        
         return cell
     }
     

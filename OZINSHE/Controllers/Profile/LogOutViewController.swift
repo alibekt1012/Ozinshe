@@ -36,6 +36,18 @@ class LogOutViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
 
+    @IBAction func logOut(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "accessToken")
+        //SignInNavigationViewController
+        
+        let rootVC = storyboard?.instantiateViewController(identifier: "SignInNavigationViewController")
+        
+        let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = rootVC
+        appDelegate.window?.makeKeyAndVisible()
+        
+        
+    }
     /*
     // MARK: - Navigation
 

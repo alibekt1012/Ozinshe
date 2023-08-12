@@ -502,6 +502,9 @@
                                         <state key="normal" title="Иә, шығу">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logOut:" destination="5Ct-bX-qZ2" eventType="touchUpInside" id="atO-dd-Ksi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjf-oe-zpc">
                                         <rect key="frame" x="24" y="208.66666666666663" width="345" height="56"/>
@@ -714,7 +717,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="152"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-dw-ekg">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="sAc-dw-ekg">
                                             <rect key="frame" x="24" y="24" width="71" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="71" id="ISh-pj-5gy"/>
@@ -1323,7 +1326,7 @@
         <!--Navigation Controller-->
         <scene sceneID="GmV-3D-ABS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UOh-lI-A16" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignInNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="UOh-lI-A16" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rUr-uv-2C0">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

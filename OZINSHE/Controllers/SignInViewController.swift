@@ -138,6 +138,8 @@ class SignInViewController: UIViewController, LanguageProtocol {
                 if let accessToken = json["accessToken"].string {
                     UserDefaults.standard.set(accessToken, forKey: "accessToken")
                     
+                    Storage.sharedInstance.accessToken = accessToken
+                    
                     self.startApp()
                 }
                 else {

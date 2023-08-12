@@ -25,3 +25,5 @@
 "DO_NOT_HAVE_AN_ACCOUNT" = "Отсутствует аккаунт?";
 "REGISTRATION" = " Зарегистрироваться";
 "REPEAT_PASSWORD" = "Повторите пароль";
+
+"CONNECTION_ERROR" = "Ошибка соединения";
