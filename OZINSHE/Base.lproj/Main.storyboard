@@ -40,14 +40,14 @@
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ali@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h37-8B-Klc">
-                                <rect key="frame" x="153.66666666666666" y="307" width="85.666666666666657" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h37-8B-Klc">
+                                <rect key="frame" x="196.66666666666666" y="307" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFX-fX-JQ2">
-                                <rect key="frame" x="0.0" y="348" width="393" height="421"/>
+                                <rect key="frame" x="0.0" y="331" width="393" height="438"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-ln-o7j">
                                         <rect key="frame" x="24" y="64" width="345" height="1"/>
@@ -417,8 +417,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="7HM-mR-HcR"/>
                                 </constraints>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Құпия сөзді қайталаңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-KC-LSx">
                                 <rect key="frame" x="24" y="225" width="163" height="17"/>
@@ -431,21 +432,39 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="UKk-rf-zT0"/>
                                 </constraints>
-                                <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-Kf-ke5">
+                                <rect key="frame" x="24" y="754" width="345" height="56"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.1764705882" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="bUr-Ih-cRh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Өзгерістерді сақтау"/>
+                                <connections>
+                                    <action selector="saveChanges:" destination="e9g-Yu-3Et" eventType="touchUpInside" id="Ps4-e6-D8O"/>
+                                    <action selector="saveChanges:" destination="76c-Qa-jWn" eventType="touchUpInside" id="uVu-UP-C0R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nK1-OP-FkR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cdi-Kf-ke5" secondAttribute="bottom" constant="42" id="7Wm-on-qn8"/>
                             <constraint firstItem="yqs-su-XRu" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="9ug-21-Z2G"/>
+                            <constraint firstItem="cdi-Kf-ke5" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="C51-M8-j5P"/>
                             <constraint firstItem="XEc-dd-Kcn" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="KXF-tZ-pHt"/>
                             <constraint firstItem="Vhl-KC-LSx" firstAttribute="top" secondItem="yqs-su-XRu" secondAttribute="bottom" constant="24" id="QgT-KL-eLn"/>
                             <constraint firstItem="XEc-dd-Kcn" firstAttribute="top" secondItem="Vhl-KC-LSx" secondAttribute="bottom" constant="4" id="WT2-lt-M7q"/>
                             <constraint firstItem="a5W-ku-6kg" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="Xa9-0H-fzC"/>
                             <constraint firstItem="yqs-su-XRu" firstAttribute="top" secondItem="a5W-ku-6kg" secondAttribute="bottom" constant="4" id="awY-eZ-yi7"/>
                             <constraint firstItem="nK1-OP-FkR" firstAttribute="trailing" secondItem="XEc-dd-Kcn" secondAttribute="trailing" constant="24" id="epk-WX-SVj"/>
+                            <constraint firstItem="nK1-OP-FkR" firstAttribute="trailing" secondItem="cdi-Kf-ke5" secondAttribute="trailing" constant="24" id="rzV-Tl-z9n"/>
                             <constraint firstItem="Vhl-KC-LSx" firstAttribute="leading" secondItem="nK1-OP-FkR" secondAttribute="leading" constant="24" id="vBD-e1-rlF"/>
                             <constraint firstItem="a5W-ku-6kg" firstAttribute="top" secondItem="nK1-OP-FkR" secondAttribute="top" constant="21" id="wSy-8E-9wK"/>
                             <constraint firstItem="nK1-OP-FkR" firstAttribute="trailing" secondItem="yqs-su-XRu" secondAttribute="trailing" constant="24" id="xWp-dK-w3f"/>
@@ -455,6 +474,7 @@
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="XEc-dd-Kcn" id="Mdy-51-jcD"/>
                         <outlet property="passwordTextField" destination="yqs-su-XRu" id="6Tk-3Q-FSU"/>
+                        <outlet property="saveChangesButton" destination="cdi-Kf-ke5" id="Cr9-QI-TvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8W-F2-uWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

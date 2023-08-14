@@ -35,6 +35,8 @@ class PersonalDataViewController: UIViewController {
     
     @IBAction func saveChanges(_ sender: Any) {
         
+        SVProgressHUD.show()
+        
         let email = nameTextField.text!
         let birthDate = birthdayTextField.text!
         let phoneNumber = phoneNumberTextField.text!
@@ -55,16 +57,15 @@ class PersonalDataViewController: UIViewController {
             var resultString = ""
             if let data = response.data {
                 resultString = String(data: data, encoding: .utf8)!
-                print(resultString)
             }
             
             if response.response?.statusCode == 200 {
-                let json = JSON(response.data!)
                 self.userData?.name = self.nameTextField.text!
                 self.userData?.birthDate = self.birthdayTextField.text!
                 self.userData?.phoneNumber = self.phoneNumberTextField.text!
                 self.delegate?.personalDataChanged(updatedData: self.userData!)
-                print(json)
+                SVProgressHUD.showSuccess(withStatus: "Changes applied")
+                SVProgressHUD.dismiss(withDelay: 1.5)
             } else {
                 var ErrorString = "CONNECTION_ERROR".localized()
                 if let sCode = response.response?.statusCode {
@@ -72,11 +73,9 @@ class PersonalDataViewController: UIViewController {
                 }
                 ErrorString = ErrorString + " \(resultString)"
                 SVProgressHUD.showError(withStatus: "\(ErrorString)")
+                SVProgressHUD.dismiss(withDelay: 1.5)
             }
         }
-        
-        
-        
     }
     
     

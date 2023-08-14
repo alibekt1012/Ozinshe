@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import SVProgressHUD
 
 class ChangePasswordViewController: UIViewController {
     
     
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var confirmPasswordTextField: UITextField!
+    @IBOutlet var saveChangesButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,52 @@ class ChangePasswordViewController: UIViewController {
     }
     
     
+    @IBAction func saveChanges(_ sender: Any) {
+     
+        SVProgressHUD.show()
+        
+        let password = passwordTextField.text!
+        let confirmPassword = confirmPasswordTextField.text!
+        
+        let parameters = ["password" : password]
+                
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        
+        if password != confirmPassword {
+            SVProgressHUD.dismiss()
+            SVProgressHUD.showError(withStatus: "Password's is not matching")
+            return
+        }
+        
+        AF.request("http://api.ozinshe.com/core/V1/user/profile/changePassword", method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+            }
+            
+            if response.response?.statusCode == 200 {
+                SVProgressHUD.showSuccess(withStatus: "Password changed")
+                SVProgressHUD.dismiss(withDelay: 1.5)
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+                SVProgressHUD.dismiss(withDelay: 1.5)
+            }
+        }
+        
+    }
+    
     func configureViews() {
+        saveChangesButton.layer.cornerRadius = 12
         configureTextField(textField: passwordTextField)
         configureTextField(textField: confirmPasswordTextField)
     }
@@ -74,18 +123,5 @@ class ChangePasswordViewController: UIViewController {
             rightImageView.trailingAnchor.constraint(equalTo: rightView.trailingAnchor, constant: -16),
             rightImageView.topAnchor.constraint(equalTo: rightView.topAnchor, constant: 18)
         ])
-        
     }
-    
- 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
