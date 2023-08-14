@@ -287,6 +287,7 @@
                         <outlet property="personalDataButton" destination="xbJ-2Y-yiY" id="ahZ-zJ-mel"/>
                         <outlet property="personalDataLabel" destination="j9h-OX-bl8" id="ZgV-2C-Ctl"/>
                         <outlet property="termsAndConditionsButton" destination="All-5O-NOO" id="6cN-oc-mkt"/>
+                        <outlet property="userEmailLabel" destination="h37-8B-Klc" id="7mB-QP-bwJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6B-s4-3KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

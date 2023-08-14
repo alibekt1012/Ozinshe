@@ -7,9 +7,15 @@
 
 import UIKit
 import Localize_Swift
+import SVProgressHUD
+import Alamofire
+import SwiftyJSON
 
 class ProfileViewController: UIViewController, LanguageProtocol {
+    
+    var profile = Profile()
    
+    @IBOutlet var userEmailLabel: UILabel!
     @IBOutlet var myProfileLabel: UILabel!
     @IBOutlet var languageButton: UIButton!
     @IBOutlet var languageLabel: UILabel!
@@ -23,8 +29,50 @@ class ProfileViewController: UIViewController, LanguageProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        downloadData()
         // Do any additional setup after loading the view.
         configureViews()
+    }
+    
+    func downloadData() {
+        SVProgressHUD.show()
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        
+        AF.request("http://api.ozinshe.com/core/V1/user/profile", method: .get, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
+            
+            if response.response?.statusCode == 200 {
+                let json = JSON(response.data!)
+                
+                self.profile = Profile(json: json)
+                print(self.profile)
+                self.userEmailLabel.text = self.profile.user_email
+                
+//                else {
+//                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+//                }
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+            }
+            
+        }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
