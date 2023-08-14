@@ -11,7 +11,8 @@ import SVProgressHUD
 import Alamofire
 import SwiftyJSON
 
-class ProfileViewController: UIViewController, LanguageProtocol {
+class ProfileViewController: UIViewController, LanguageProtocol, PersonalDataDelegate {
+  
     
     var profile = Profile()
    
@@ -33,6 +34,11 @@ class ProfileViewController: UIViewController, LanguageProtocol {
         // Do any additional setup after loading the view.
         configureViews()
     }
+    
+    func personalDataChanged(updatedData: Profile) {
+        profile = updatedData
+    }
+    
     
     func downloadData() {
         SVProgressHUD.show()
@@ -78,6 +84,8 @@ class ProfileViewController: UIViewController, LanguageProtocol {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? PersonalDataViewController {
             destinationVC.hidesBottomBarWhenPushed = true
+            destinationVC.delegate = self
+            destinationVC.userData = profile
         }
         if let destinationVC = segue.destination as? ChangePasswordViewController {
             destinationVC.hidesBottomBarWhenPushed = true
