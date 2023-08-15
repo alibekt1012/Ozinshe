@@ -412,7 +412,7 @@
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqs-su-XRu">
+                            <textField opaque="NO" tag="10001" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqs-su-XRu">
                                 <rect key="frame" x="24" y="145" width="345" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="7HM-mR-HcR"/>
@@ -427,7 +427,7 @@
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-dd-Kcn">
+                            <textField opaque="NO" tag="1002" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сіздің құпия сөзіңіз" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEc-dd-Kcn">
                                 <rect key="frame" x="24" y="246" width="345" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="UKk-rf-zT0"/>
@@ -1372,19 +1372,19 @@
     </scenes>
     <designables>
         <designable name="9MK-Um-Myt">
-            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+            <size key="intrinsicContentSize" width="235.66666666666666" height="20"/>
         </designable>
         <designable name="H21-hK-MIN">
-            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+            <size key="intrinsicContentSize" width="235.66666666666666" height="20"/>
         </designable>
         <designable name="RSh-Yo-w0A">
-            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
+            <size key="intrinsicContentSize" width="175.66666666666666" height="21"/>
         </designable>
         <designable name="byh-Hz-LKx">
-            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
+            <size key="intrinsicContentSize" width="175.66666666666666" height="21"/>
         </designable>
         <designable name="cA2-36-JdC">
-            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+            <size key="intrinsicContentSize" width="235.66666666666666" height="20"/>
         </designable>
     </designables>
     <resources>

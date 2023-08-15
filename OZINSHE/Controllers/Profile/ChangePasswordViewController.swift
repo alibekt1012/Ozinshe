@@ -100,13 +100,21 @@ class ChangePasswordViewController: UIViewController {
             leftImageView.topAnchor.constraint(equalTo: leftView.topAnchor, constant: 18)
         ])
         
-        // Configure the right image
+        
+        let showButton = UIButton()
+        showButton.tag = textField.tag
+        showButton.setImage(UIImage(named: "Show"), for: .normal)
+        showButton.translatesAutoresizingMaskIntoConstraints = false
+        showButton.addTarget(self, action: #selector(showPassword(_:)), for: .touchUpInside)
+        
+        // Configure the right view
         let rightImageView = UIImageView(image: UIImage(named: "Show"))
         rightImageView.translatesAutoresizingMaskIntoConstraints = false
         
         let rightView = UIView()
         rightView.translatesAutoresizingMaskIntoConstraints = false
-        rightView.addSubview(rightImageView)
+        // rightView.addSubview(rightImageView)
+        rightView.addSubview(showButton)
 
         textField.rightView = rightView
         textField.rightViewMode = .always
@@ -118,10 +126,19 @@ class ChangePasswordViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            rightImageView.widthAnchor.constraint(equalToConstant: 20),
-            rightImageView.heightAnchor.constraint(equalToConstant: 20),
-            rightImageView.trailingAnchor.constraint(equalTo: rightView.trailingAnchor, constant: -16),
-            rightImageView.topAnchor.constraint(equalTo: rightView.topAnchor, constant: 18)
+            showButton.widthAnchor.constraint(equalToConstant: 20),
+            showButton.heightAnchor.constraint(equalToConstant: 20),
+            showButton.trailingAnchor.constraint(equalTo: rightView.trailingAnchor, constant: -16),
+            showButton.topAnchor.constraint(equalTo: rightView.topAnchor, constant: 18)
         ])
+    }
+    
+    @objc func showPassword(_ sender: UIButton) {
+        
+        guard let textField = view.viewWithTag(sender.tag) as? UITextField else {
+                return
+            }
+            
+        textField.isSecureTextEntry.toggle()
     }
 }
