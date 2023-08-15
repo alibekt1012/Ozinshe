@@ -30,6 +30,7 @@ class PersonalDataViewController: UIViewController {
         configureViews()
         // Do any additional setup after loading the view.
         setupData()
+        self.birthdayTextField.setInputViewDatePicker(target: self, selector: #selector(tapDone))
     }
 
     
@@ -95,15 +96,13 @@ class PersonalDataViewController: UIViewController {
         birthdayTextField.text = userData.birthDate
         emailLabel.text = userData.user_email
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    @objc func tapDone() {
+            if let datePicker = self.birthdayTextField.inputView as? UIDatePicker { // 2-1
+                let dateformatter = DateFormatter() // 2-2
+                dateformatter.dateFormat = "yyyy-MM-dd" // 2-3
+                self.birthdayTextField.text = dateformatter.string(from: datePicker.date) //2-4
+            }
+            self.birthdayTextField.resignFirstResponder() // 2-5
+        }
 }

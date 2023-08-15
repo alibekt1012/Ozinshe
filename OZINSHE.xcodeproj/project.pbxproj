@@ -25,6 +25,7 @@
 		1D5F933A2A6AC12F00A4EECF /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D5F93352A6AC10400A4EECF /* SFProDisplay-Bold.ttf */; };
 		1D5F933D2A6AC96E00A4EECF /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */; };
 		1D5F933F2A6AC9DF00A4EECF /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */; };
+		1D5FD4AA2A8B25D10073F2A6 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FD4A92A8B25D10073F2A6 /* DatePicker.swift */; };
 		1D66B9B42A74067700D4F6ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66B9B32A74067700D4F6ED /* ProfileViewController.swift */; };
 		1D66B9B62A7406B000D4F6ED /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66B9B52A7406B000D4F6ED /* LanguageViewController.swift */; };
 		1D66B9B92A77F21A00D4F6ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D66B9BB2A77F21A00D4F6ED /* Localizable.strings */; };
@@ -57,6 +58,7 @@
 		1D5F93372A6AC10400A4EECF /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		1D5FD4A92A8B25D10073F2A6 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		1D66B9B32A74067700D4F6ED /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1D66B9B52A7406B000D4F6ED /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		1D66B9BA2A77F21A00D4F6ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				1D66B9BB2A77F21A00D4F6ED /* Localizable.strings */,
 				1D116BFF2A7D48B100E01570 /* TextFieldWithPadding.swift */,
 				1D9F49672A866D2F00D9ACAA /* Storage.swift */,
+				1D5FD4A92A8B25D10073F2A6 /* DatePicker.swift */,
 			);
 			path = OZINSHE;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				1D116C042A7D498C00E01570 /* SignInViewController.swift in Sources */,
 				1D66B9B62A7406B000D4F6ED /* LanguageViewController.swift in Sources */,
 				1D9F496D2A87649A00D9ACAA /* Profile.swift in Sources */,
+				1D5FD4AA2A8B25D10073F2A6 /* DatePicker.swift in Sources */,
 				1D5F933F2A6AC9DF00A4EECF /* MovieTableViewCell.swift in Sources */,
 				1D0534C52A80BA38001CE272 /* SignUpViewController.swift in Sources */,
 				1D5F93222A6A9E3200A4EECF /* SceneDelegate.swift in Sources */,
