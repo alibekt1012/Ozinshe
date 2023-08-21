@@ -13,6 +13,9 @@
 		1D116C042A7D498C00E01570 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D116C032A7D498C00E01570 /* SignInViewController.swift */; };
 		1D2C52342A7A2E0400EB6A24 /* PersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C52332A7A2E0400EB6A24 /* PersonalDataViewController.swift */; };
 		1D2C52362A7A8A0800EB6A24 /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C52352A7A8A0800EB6A24 /* LogOutViewController.swift */; };
+		1D45D88E2A939DE200040152 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45D88D2A939DE200040152 /* SearchViewController.swift */; };
+		1D45D8922A93B06200040152 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45D8912A93B06200040152 /* Category.swift */; };
+		1D45D8952A93B25600040152 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D45D8942A93B25600040152 /* Urls.swift */; };
 		1D5F93202A6A9E3200A4EECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F931F2A6A9E3200A4EECF /* AppDelegate.swift */; };
 		1D5F93222A6A9E3200A4EECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F93212A6A9E3200A4EECF /* SceneDelegate.swift */; };
 		1D5F93242A6A9E3200A4EECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F93232A6A9E3200A4EECF /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 		1D116C032A7D498C00E01570 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1D2C52332A7A2E0400EB6A24 /* PersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataViewController.swift; sourceTree = "<group>"; };
 		1D2C52352A7A8A0800EB6A24 /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		1D45D88D2A939DE200040152 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1D45D8912A93B06200040152 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1D45D8942A93B25600040152 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		1D5F931C2A6A9E3200A4EECF /* OZINSHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OZINSHE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5F931F2A6A9E3200A4EECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5F93212A6A9E3200A4EECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +100,7 @@
 				1D5F93232A6A9E3200A4EECF /* ViewController.swift */,
 				1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */,
 				1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */,
-				1DDFDDD12A820726003E040F /* Validation.swift */,
+				1D45D88D2A939DE200040152 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +115,32 @@
 				1D116BFB2A7B899200E01570 /* ChangePasswordViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		1D45D88F2A93A10400040152 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				1D116BFF2A7D48B100E01570 /* TextFieldWithPadding.swift */,
+				1D5FD4A92A8B25D10073F2A6 /* DatePicker.swift */,
+				1DDFDDD12A820726003E040F /* Validation.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		1D45D8902A93A12100040152 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F49672A866D2F00D9ACAA /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		1D45D8932A93B24600040152 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				1D45D8942A93B25600040152 /* Urls.swift */,
+			);
+			path = Static;
 			sourceTree = "<group>";
 		};
 		1D5F93132A6A9E3200A4EECF = {
@@ -132,6 +164,9 @@
 		1D5F931E2A6A9E3200A4EECF /* OZINSHE */ = {
 			isa = PBXGroup;
 			children = (
+				1D45D8932A93B24600040152 /* Static */,
+				1D45D8902A93A12100040152 /* Storage */,
+				1D45D88F2A93A10400040152 /* Extentions */,
 				1D9F49692A866E5400D9ACAA /* Model */,
 				1D5F933B2A6AC14500A4EECF /* Fonts */,
 				1D116C012A7D492400E01570 /* Controllers */,
@@ -142,9 +177,6 @@
 				1D5F932A2A6A9E3300A4EECF /* LaunchScreen.storyboard */,
 				1D5F932D2A6A9E3300A4EECF /* Info.plist */,
 				1D66B9BB2A77F21A00D4F6ED /* Localizable.strings */,
-				1D116BFF2A7D48B100E01570 /* TextFieldWithPadding.swift */,
-				1D9F49672A866D2F00D9ACAA /* Storage.swift */,
-				1D5FD4A92A8B25D10073F2A6 /* DatePicker.swift */,
 			);
 			path = OZINSHE;
 			sourceTree = "<group>";
@@ -164,6 +196,7 @@
 			children = (
 				1D9F496A2A8672E800D9ACAA /* Movie.swift */,
 				1D9F496C2A87649A00D9ACAA /* Profile.swift */,
+				1D45D8912A93B06200040152 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,15 +349,18 @@
 				1D9F496D2A87649A00D9ACAA /* Profile.swift in Sources */,
 				1D5FD4AA2A8B25D10073F2A6 /* DatePicker.swift in Sources */,
 				1D5F933F2A6AC9DF00A4EECF /* MovieTableViewCell.swift in Sources */,
+				1D45D88E2A939DE200040152 /* SearchViewController.swift in Sources */,
 				1D0534C52A80BA38001CE272 /* SignUpViewController.swift in Sources */,
 				1D5F93222A6A9E3200A4EECF /* SceneDelegate.swift in Sources */,
 				1D66B9B42A74067700D4F6ED /* ProfileViewController.swift in Sources */,
 				1D5F933D2A6AC96E00A4EECF /* FavoritesTableViewController.swift in Sources */,
+				1D45D8952A93B25600040152 /* Urls.swift in Sources */,
 				1D2C52362A7A8A0800EB6A24 /* LogOutViewController.swift in Sources */,
 				1D9F49682A866D2F00D9ACAA /* Storage.swift in Sources */,
 				1DDFDDD22A820726003E040F /* Validation.swift in Sources */,
 				1D5F93342A6AA24600A4EECF /* TabBar.swift in Sources */,
 				1D9F496B2A8672E800D9ACAA /* Movie.swift in Sources */,
+				1D45D8922A93B06200040152 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

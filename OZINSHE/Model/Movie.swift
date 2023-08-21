@@ -26,6 +26,7 @@ struct Movie {
     var seriesCount = 0
     var createdDate = ""
     var lastModifiedDate = ""
+    var categories: [Category] = []
     var favorite = false
     
     init() {
@@ -87,6 +88,12 @@ struct Movie {
         }
         if let temp = json["lastModifiedDate"].string {
             lastModifiedDate = temp
+        }
+        if let array = json["categories"].array {
+            for item in array {
+                let temp = Category(json: item)
+                categories.append(temp)
+            }
         }
         if let temp = json["favorite"].bool {
             favorite = temp

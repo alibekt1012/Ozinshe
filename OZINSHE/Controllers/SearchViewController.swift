@@ -1,0 +1,155 @@
+//
+//  SearchViewController.swift
+//  OZINSHE
+//
+//  Created by Almat Alibekov on 21.08.2023.
+//
+
+import UIKit
+import SwiftyJSON
+import Alamofire
+import SVProgressHUD
+
+class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
+
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        let attributes = super.layoutAttributesForElements(in: rect)
+
+        var leftMargin = sectionInset.left
+        var maxY: CGFloat = -1.0
+        attributes?.forEach { layoutAttribute in
+            if layoutAttribute.frame.origin.y >= maxY {
+                leftMargin = sectionInset.left
+            }
+
+            layoutAttribute.frame.origin.x = leftMargin
+
+            leftMargin += layoutAttribute.frame.width + minimumInteritemSpacing
+            maxY = max(layoutAttribute.frame.maxY , maxY)
+        }
+
+        return attributes
+    }
+}
+
+class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+  
+    @IBOutlet weak var SearchTextfield: TextFieldWithPadding!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var categories: [Category] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        configureViews()
+        keyboardWhenTappedAround()
+        downloadCategories()
+    }
+    
+    func configureViews() {
+        
+        
+        // Search
+        SearchTextfield.padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        SearchTextfield.layer.cornerRadius = 12
+        SearchTextfield.layer.borderWidth = 1
+        SearchTextfield.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+        
+        searchButton.setBackgroundImage(UIImage(named: "SearchButtonHighlighted"), for: .highlighted)
+        
+        // Collection view
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        let layout = LeftAlignedCollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 16.0, left: 24.0, bottom: 16.0, right: 24.0)
+        layout.minimumLineSpacing = 16
+        layout.minimumInteritemSpacing = 8
+        layout.estimatedItemSize.width = 100
+        collectionView.collectionViewLayout = layout
+    }
+    
+    func keyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @IBAction func TextFieldEditingDidBegin(_ sender: TextFieldWithPadding) {
+        sender.layer.borderColor = UIColor(red: 0.59, green: 0.33, blue: 0.94, alpha: 1.00).cgColor
+    }
+    
+    
+    @IBAction func TextFieldEditingDidEd(_ sender: TextFieldWithPadding) {
+        sender.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+    }
+    
+    
+    @IBAction func clearSearch(_ sender: Any) {
+        SearchTextfield.text = ""
+    }
+    
+    // MARK: - Download caregories
+    func downloadCategories() {
+        SVProgressHUD.show()
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        
+        AF.request(Urls.CATEGORIES_URL, method: .get, headers: headers).responseData { response in
+                   
+                   SVProgressHUD.dismiss()
+                   var resultString = ""
+                   if let data = response.data {
+                       resultString = String(data: data, encoding: .utf8)!
+                       print(resultString)
+                   }
+                   
+                   if response.response?.statusCode == 200 {
+                       let json = JSON(response.data!)
+                       print("JSON: \(json)")
+                       
+                       if let array = json.array {
+                           for item in array {
+                               let category = Category(json: item)
+                               self.categories.append(category)
+                           }
+                           self.collectionView.reloadData()
+                       } else {
+                           SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                       }
+                   } else {
+                       var ErrorString = "CONNECTION_ERROR".localized()
+                       if let sCode = response.response?.statusCode {
+                           ErrorString = ErrorString + " \(sCode)"
+                       }
+                       ErrorString = ErrorString + " \(resultString)"
+                       SVProgressHUD.showError(withStatus: "\(ErrorString)")
+                   }
+               }
+    }
+    
+    //MARK: - CollectionView
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let label = cell.viewWithTag(1001) as! UILabel
+        label.text = categories[indexPath.row].name
+        
+        let backgroundview = cell.viewWithTag(1000)
+        backgroundview!.layer.cornerRadius = 8
+        
+        return cell
+    }
+}

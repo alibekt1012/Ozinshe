@@ -122,7 +122,7 @@ class SignInViewController: UIViewController, LanguageProtocol {
             return
         }
         let parameters = ["email": email, "password": password]
-        AF.request("http://api.ozinshe.com/auth/V1/signin", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseData { response in
+        AF.request(Urls.SIGN_IN_URL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseData { response in
             
             SVProgressHUD.dismiss()
             

@@ -31,7 +31,7 @@ class FavoritesTableViewController: UITableViewController {
         let headers: HTTPHeaders = [
             "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
         ]
-        AF.request("http://api.ozinshe.com/core/V1/favorite/", method: .get, headers: headers).responseData { response in
+        AF.request(Urls.FAVORITE_URL, method: .get, headers: headers).responseData { response in
             
             SVProgressHUD.dismiss()
             

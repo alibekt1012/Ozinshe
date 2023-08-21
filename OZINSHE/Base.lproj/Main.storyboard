@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -832,7 +833,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igF-X8-cad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="342"/>
+            <point key="canvasLocation" x="134" y="-13"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AgP-ls-0LS">
@@ -848,7 +849,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mah-UY-YdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-24" y="-1127"/>
+            <point key="canvasLocation" x="134" y="-2112"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="etE-ZP-sjy">
@@ -1307,7 +1308,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="mXj-ZS-1iR" kind="relationship" relationship="viewControllers" id="zbv-xs-FWg"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Sy9-Qf-Lze"/>
+                        <segue destination="j5g-M8-d4h" kind="relationship" relationship="viewControllers" id="Sy9-Qf-Lze"/>
                         <segue destination="fTm-qC-QJu" kind="relationship" relationship="viewControllers" id="UGM-og-6sC"/>
                         <segue destination="5gL-PD-Rda" kind="relationship" relationship="viewControllers" id="ML6-3K-vvC"/>
                     </connections>
@@ -1316,21 +1317,131 @@
             </objects>
             <point key="canvasLocation" x="-971.7557251908396" y="-13.380281690140846"/>
         </scene>
-        <!--View Controller-->
+        <!--Іздеу-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OZINSHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="OZINSHE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMc-r6-h8Y" customClass="TextFieldWithPadding" customModule="OZINSHE" customModuleProvider="target">
+                                <rect key="frame" x="24" y="127" width="273" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="qya-al-1Iv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="TextFieldEditingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="O6H-w4-eep"/>
+                                    <action selector="TextFieldEditingDidEd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="JhE-vT-KBu"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy6-7w-Wua">
+                                <rect key="frame" x="313" y="127" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="gSb-7B-6L8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="SearchButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DB-iF-9yl">
+                                <rect key="frame" x="245" y="127" width="52" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="RF2-7X-3r1"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ClearIcon"/>
+                                <connections>
+                                    <action selector="clearSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nue-Hc-L7C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Санаттар" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-8z-Jaz">
+                                <rect key="frame" x="24.000000000000007" y="215" width="109.66666666666669" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-FC-H2K">
+                                <rect key="frame" x="0.0" y="243.66666666666669" width="393" height="525.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lV1-Wx-SSR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pKq-18-0SI">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="blD-F1-e4F">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="34"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="1000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8J-Zs-5OU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="34"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телехикая" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lp-3S-tsw">
+                                                            <rect key="frame" x="16" y="0.0" width="96" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="34" id="NrB-nC-WqN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="12"/>
+                                                            <color key="textColor" red="0.21568627450980393" green="0.25490196078431371" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.95294117647058818" green="0.95686274509803915" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="1lp-3S-tsw" secondAttribute="bottom" id="2ba-OG-eOj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1lp-3S-tsw" secondAttribute="trailing" constant="16" id="9l8-Rh-gqo"/>
+                                                        <constraint firstItem="1lp-3S-tsw" firstAttribute="leading" secondItem="S8J-Zs-5OU" secondAttribute="leading" constant="16" id="M2G-Hd-3Xh"/>
+                                                        <constraint firstItem="1lp-3S-tsw" firstAttribute="top" secondItem="S8J-Zs-5OU" secondAttribute="top" id="T4N-7x-f62"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S8J-Zs-5OU" firstAttribute="leading" secondItem="blD-F1-e4F" secondAttribute="leading" id="3w7-yG-hza"/>
+                                                <constraint firstAttribute="trailing" secondItem="S8J-Zs-5OU" secondAttribute="trailing" id="6PS-r2-El4"/>
+                                                <constraint firstItem="S8J-Zs-5OU" firstAttribute="top" secondItem="blD-F1-e4F" secondAttribute="top" id="bkb-xP-Yg3"/>
+                                                <constraint firstAttribute="bottom" secondItem="S8J-Zs-5OU" secondAttribute="bottom" id="dxn-Mv-7b9"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="128" height="34"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tjO-8z-Jaz" firstAttribute="top" secondItem="FMc-r6-h8Y" secondAttribute="bottom" constant="32" id="IJU-Q7-SAj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3gh-FC-H2K" secondAttribute="bottom" id="L8S-3j-G10"/>
+                            <constraint firstItem="FMc-r6-h8Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="Rzt-8U-3nz"/>
+                            <constraint firstItem="FMc-r6-h8Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="W0V-ci-BCk"/>
+                            <constraint firstItem="3gh-FC-H2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yam-pF-bVk"/>
+                            <constraint firstItem="6DB-iF-9yl" firstAttribute="top" secondItem="FMc-r6-h8Y" secondAttribute="top" id="bBW-io-dti"/>
+                            <constraint firstItem="6DB-iF-9yl" firstAttribute="bottom" secondItem="FMc-r6-h8Y" secondAttribute="bottom" id="dUb-IY-1zx"/>
+                            <constraint firstItem="Qy6-7w-Wua" firstAttribute="leading" secondItem="FMc-r6-h8Y" secondAttribute="trailing" constant="16" id="hdR-0a-aBg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gh-FC-H2K" secondAttribute="trailing" id="lNs-hy-lfH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qy6-7w-Wua" secondAttribute="trailing" constant="24" id="ozS-EV-3Yz"/>
+                            <constraint firstItem="3gh-FC-H2K" firstAttribute="top" secondItem="tjO-8z-Jaz" secondAttribute="bottom" id="r73-rk-EPE"/>
+                            <constraint firstItem="Qy6-7w-Wua" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="wRa-gu-kx1"/>
+                            <constraint firstItem="tjO-8z-Jaz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="wqF-08-Wfz"/>
+                            <constraint firstItem="6DB-iF-9yl" firstAttribute="trailing" secondItem="FMc-r6-h8Y" secondAttribute="trailing" id="xLL-HQ-Y54"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Search" id="ecX-8U-rfV"/>
+                    <navigationItem key="navigationItem" title="Іздеу" id="9u6-pX-REF"/>
+                    <connections>
+                        <outlet property="SearchTextfield" destination="FMc-r6-h8Y" id="ERz-mJ-YYQ"/>
+                        <outlet property="collectionView" destination="3gh-FC-H2K" id="KIt-nA-JZz"/>
+                        <outlet property="searchButton" destination="Qy6-7w-Wua" id="OmL-jk-tWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="-516"/>
+            <point key="canvasLocation" x="1058.7786259541983" y="-1035.2112676056338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pUF-Ob-Pgl">
@@ -1369,28 +1480,48 @@
             </objects>
             <point key="canvasLocation" x="-3898.4732824427479" y="-13.380281690140846"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ynx-2q-Lbb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j5g-M8-d4h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Search" id="ecX-8U-rfV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="36v-Gy-LZR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GhK-tW-s12"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEa-JU-9dC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.58778625954199" y="-1035.2112676056338"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="9MK-Um-Myt">
-            <size key="intrinsicContentSize" width="235.66666666666666" height="20"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
         <designable name="H21-hK-MIN">
-            <size key="intrinsicContentSize" width="235.66666666666666" height="20"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
         <designable name="RSh-Yo-w0A">
-            <size key="intrinsicContentSize" width="175.66666666666666" height="21"/>
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
         </designable>
         <designable name="byh-Hz-LKx">
-            <size key="intrinsicContentSize" width="175.66666666666666" height="21"/>
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
         </designable>
         <designable name="cA2-36-JdC">
-            <size key="intrinsicContentSize" width="235.66666666666666" height="20"/>
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
         </designable>
     </designables>
     <resources>
         <image name="Arrow" width="16" height="16"/>
         <image name="Avatar" width="104" height="104"/>
         <image name="Check" width="24" height="24"/>
+        <image name="ClearIcon" width="20" height="20"/>
         <image name="Email" width="20" height="20"/>
         <image name="Home" width="40" height="40"/>
         <image name="LogOut" width="24" height="24"/>
@@ -1398,6 +1529,7 @@
         <image name="Play" width="16.333333969116211" height="16"/>
         <image name="Profile" width="40" height="40"/>
         <image name="Search" width="40" height="40"/>
+        <image name="SearchButton" width="56" height="56"/>
         <image name="Show" width="20" height="20"/>
         <image name="favorite" width="40" height="40"/>
         <image name="image" width="72" height="104"/>
