@@ -32,13 +32,23 @@ class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
 }
 
-class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-  
+class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
+
     @IBOutlet weak var SearchTextfield: TextFieldWithPadding!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tableViewToLableConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var tableViewToCollectionViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var clearButton: UIButton!
+    
     var categories: [Category] = []
+    
+    var movies: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +80,13 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         layout.minimumInteritemSpacing = 8
         layout.estimatedItemSize.width = 100
         collectionView.collectionViewLayout = layout
+        
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        let movieCellNib = UINib(nibName: "MovieCell", bundle: nil)
+        tableView.register(movieCellNib, forCellReuseIdentifier: "MovieCell")
     }
     
     func keyboardWhenTappedAround() {
@@ -94,6 +111,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBAction func clearSearch(_ sender: Any) {
         SearchTextfield.text = ""
+        textFieldVaueChanged(sender)
     }
     
     // MARK: - Download caregories
@@ -152,4 +170,61 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let categoryMoviesVC = storyboard?.instantiateViewController(withIdentifier: "CategoryTableViewController") as! CategoryTableViewController
+        
+        categoryMoviesVC.categoryId = categories[indexPath.row].id
+        
+        navigationController?.pushViewController(categoryMoviesVC, animated: true)
+    }
+    
+    
+    // MARK: - TableView
+    @IBAction func textFieldVaueChanged(_ sender: Any) {
+        let searchText = SearchTextfield.text!
+        
+        if searchText.isEmpty {
+            // Hide tableView
+            tableViewToLableConstraint.priority = .defaultLow
+            tableViewToCollectionViewConstraint.priority = .defaultHigh
+            
+            movies.removeAll()
+            tableView.reloadData()
+            
+            titleLabel.text = "Санаттар"
+            
+            clearButton.isHidden = true
+            
+            return
+        }
+        
+        // Показать tableview
+        
+        tableViewToLableConstraint.priority = .defaultHigh
+        tableViewToCollectionViewConstraint.priority = .defaultLow
+        titleLabel.text = "Іздеу нәтижелері"
+        clearButton.isHidden = false
+        
+        // TODO: Search Movies
+        
+        movies = Array(repeating: Movie(), count: 5)
+        tableView.reloadData()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieTableViewCell
+    
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 152
+    }
+    
 }

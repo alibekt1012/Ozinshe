@@ -32,6 +32,8 @@
 		1D66B9B42A74067700D4F6ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66B9B32A74067700D4F6ED /* ProfileViewController.swift */; };
 		1D66B9B62A7406B000D4F6ED /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D66B9B52A7406B000D4F6ED /* LanguageViewController.swift */; };
 		1D66B9B92A77F21A00D4F6ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D66B9BB2A77F21A00D4F6ED /* Localizable.strings */; };
+		1D9471452A98E7D20067ED01 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9471442A98E7D20067ED01 /* MovieCell.xib */; };
+		1D9471472A98EE810067ED01 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9471462A98EE810067ED01 /* CategoryTableViewController.swift */; };
 		1D9F49682A866D2F00D9ACAA /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F49672A866D2F00D9ACAA /* Storage.swift */; };
 		1D9F496B2A8672E800D9ACAA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F496A2A8672E800D9ACAA /* Movie.swift */; };
 		1D9F496D2A87649A00D9ACAA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F496C2A87649A00D9ACAA /* Profile.swift */; };
@@ -70,6 +72,8 @@
 		1D66B9BA2A77F21A00D4F6ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D66B9BC2A77F27500D4F6ED /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D66B9BD2A77F2AA00D4F6ED /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D9471442A98E7D20067ED01 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		1D9471462A98EE810067ED01 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		1D9F49672A866D2F00D9ACAA /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		1D9F496A2A8672E800D9ACAA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		1D9F496C2A87649A00D9ACAA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		1D116C012A7D492400E01570 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D9471432A98E7BD0067ED01 /* MovieCell */,
 				1D116C022A7D495400E01570 /* Profile */,
 				1D116C032A7D498C00E01570 /* SignInViewController.swift */,
 				1D0534C42A80BA38001CE272 /* SignUpViewController.swift */,
@@ -101,6 +106,7 @@
 				1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */,
 				1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */,
 				1D45D88D2A939DE200040152 /* SearchViewController.swift */,
+				1D9471462A98EE810067ED01 /* CategoryTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +195,14 @@
 				1D5F93372A6AC10400A4EECF /* SF-Pro-Display-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1D9471432A98E7BD0067ED01 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D9471442A98E7D20067ED01 /* MovieCell.xib */,
+			);
+			path = MovieCell;
 			sourceTree = "<group>";
 		};
 		1D9F49692A866E5400D9ACAA /* Model */ = {
@@ -284,6 +298,7 @@
 				1D5F932C2A6A9E3300A4EECF /* LaunchScreen.storyboard in Resources */,
 				1D5F93292A6A9E3300A4EECF /* Assets.xcassets in Resources */,
 				1D66B9B92A77F21A00D4F6ED /* Localizable.strings in Resources */,
+				1D9471452A98E7D20067ED01 /* MovieCell.xib in Resources */,
 				1D5F933A2A6AC12F00A4EECF /* SFProDisplay-Bold.ttf in Resources */,
 				1D5F93392A6AC12D00A4EECF /* SFProDisplay-Regular.ttf in Resources */,
 				1D5F93272A6A9E3200A4EECF /* Main.storyboard in Resources */,
@@ -354,6 +369,7 @@
 				1D5F93222A6A9E3200A4EECF /* SceneDelegate.swift in Sources */,
 				1D66B9B42A74067700D4F6ED /* ProfileViewController.swift in Sources */,
 				1D5F933D2A6AC96E00A4EECF /* FavoritesTableViewController.swift in Sources */,
+				1D9471472A98EE810067ED01 /* CategoryTableViewController.swift in Sources */,
 				1D45D8952A93B25600040152 /* Urls.swift in Sources */,
 				1D2C52362A7A8A0800EB6A24 /* LogOutViewController.swift in Sources */,
 				1D9F49682A866D2F00D9ACAA /* Storage.swift in Sources */,
