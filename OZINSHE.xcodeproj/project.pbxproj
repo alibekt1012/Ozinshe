@@ -97,16 +97,14 @@
 		1D116C012A7D492400E01570 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1DDF2CDF2A9CDD1B00C0F045 /* Search */,
+				1DDF2CDE2A9CDD0300C0F045 /* Favorites */,
 				1D9471432A98E7BD0067ED01 /* MovieCell */,
 				1D116C022A7D495400E01570 /* Profile */,
 				1D116C032A7D498C00E01570 /* SignInViewController.swift */,
 				1D0534C42A80BA38001CE272 /* SignUpViewController.swift */,
 				1D5F93332A6AA24600A4EECF /* TabBar.swift */,
 				1D5F93232A6A9E3200A4EECF /* ViewController.swift */,
-				1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */,
-				1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */,
-				1D45D88D2A939DE200040152 /* SearchViewController.swift */,
-				1D9471462A98EE810067ED01 /* CategoryTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +198,7 @@
 		1D9471432A98E7BD0067ED01 /* MovieCell */ = {
 			isa = PBXGroup;
 			children = (
+				1D5F933E2A6AC9DF00A4EECF /* MovieTableViewCell.swift */,
 				1D9471442A98E7D20067ED01 /* MovieCell.xib */,
 			);
 			path = MovieCell;
@@ -213,6 +212,23 @@
 				1D45D8912A93B06200040152 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1DDF2CDE2A9CDD0300C0F045 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				1D5F933C2A6AC96E00A4EECF /* FavoritesTableViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		1DDF2CDF2A9CDD1B00C0F045 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1D9471462A98EE810067ED01 /* CategoryTableViewController.swift */,
+				1D45D88D2A939DE200040152 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		4268FE1614669A45B5507BEA /* Pods */ = {

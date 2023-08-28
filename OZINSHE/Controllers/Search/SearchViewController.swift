@@ -34,7 +34,7 @@ class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
 class SearchViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var SearchTextfield: TextFieldWithPadding!
+    @IBOutlet weak var searchTextfield: TextFieldWithPadding!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -63,10 +63,10 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         
         // Search
-        SearchTextfield.padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-        SearchTextfield.layer.cornerRadius = 12
-        SearchTextfield.layer.borderWidth = 1
-        SearchTextfield.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
+        searchTextfield.padding = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        searchTextfield.layer.cornerRadius = 12
+        searchTextfield.layer.borderWidth = 1
+        searchTextfield.layer.borderColor = UIColor(red: 0.90, green: 0.92, blue: 0.94, alpha: 1.00).cgColor
         
         searchButton.setBackgroundImage(UIImage(named: "SearchButtonHighlighted"), for: .highlighted)
         
@@ -110,7 +110,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
     @IBAction func clearSearch(_ sender: Any) {
-        SearchTextfield.text = ""
+        searchTextfield.text = ""
         textFieldVaueChanged(sender)
     }
     
@@ -182,7 +182,13 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     // MARK: - TableView
     @IBAction func textFieldVaueChanged(_ sender: Any) {
-        let searchText = SearchTextfield.text!
+        downloadSearchMovies()
+        
+    }
+    
+    func downloadSearchMovies() {
+        
+        let searchText = searchTextfield.text!
         
         if searchText.isEmpty {
             // Hide tableView
@@ -206,11 +212,49 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         titleLabel.text = "Іздеу нәтижелері"
         clearButton.isHidden = false
         
-        // TODO: Search Movies
+       
+        SVProgressHUD.show()
         
-        movies = Array(repeating: Movie(), count: 5)
-        tableView.reloadData()
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
         
+        let parameters = ["search": searchTextfield.text!]
+        
+        AF.request(Urls.SEARCH_MOVIES_URL, method: .get, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
+            
+            if response.response?.statusCode == 200 {
+                let json = JSON(response.data!)
+                
+                if let array = json.array {
+                    self.movies.removeAll()
+                    self.tableView.reloadData()
+                    for item in array {
+                        let movie = Movie(json: item)
+                        self.movies.append(movie)
+                    }
+                    self.tableView.reloadData()
+                } else {
+                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                }
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+            }
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
