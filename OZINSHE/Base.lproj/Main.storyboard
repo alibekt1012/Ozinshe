@@ -1345,6 +1345,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" backgroundImage="SearchButton"/>
+                                <connections>
+                                    <action selector="searchButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eb8-4e-UBj"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DB-iF-9yl">
                                 <rect key="frame" x="245" y="127" width="52" height="56"/>
@@ -1358,13 +1361,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Санаттар" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-8z-Jaz">
-                                <rect key="frame" x="24.000000000000007" y="215" width="109.66666666666669" height="28.666666666666657"/>
+                                <rect key="frame" x="24.000000000000007" y="215" width="109.66666666666669" height="28"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                 <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-FC-H2K">
-                                <rect key="frame" x="0.0" y="243.66666666666663" width="393" height="400"/>
+                                <rect key="frame" x="0.0" y="243" width="393" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="URP-jX-dee"/>
@@ -1417,7 +1420,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AEk-a1-jlr">
-                                <rect key="frame" x="0.0" y="643.66666666666663" width="393" height="125.33333333333337"/>
+                                <rect key="frame" x="0.0" y="643" width="393" height="126"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -1545,6 +1548,26 @@
             <point key="canvasLocation" x="133.58778625954199" y="-1035.2112676056338"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="9MK-Um-Myt">
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+        </designable>
+        <designable name="FMc-r6-h8Y">
+            <size key="intrinsicContentSize" width="39.333333333333336" height="21"/>
+        </designable>
+        <designable name="H21-hK-MIN">
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+        </designable>
+        <designable name="RSh-Yo-w0A">
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
+        </designable>
+        <designable name="byh-Hz-LKx">
+            <size key="intrinsicContentSize" width="87.666666666666671" height="21"/>
+        </designable>
+        <designable name="cA2-36-JdC">
+            <size key="intrinsicContentSize" width="147.66666666666666" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Arrow" width="16" height="16"/>
         <image name="Avatar" width="104" height="104"/>

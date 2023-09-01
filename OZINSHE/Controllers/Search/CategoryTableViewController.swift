@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import SVProgressHUD
 
 class CategoryTableViewController: UITableViewController {
     
@@ -19,7 +22,56 @@ class CategoryTableViewController: UITableViewController {
         let movieCellNib = UINib(nibName: "MovieCell", bundle: nil)
         tableView.register(movieCellNib, forCellReuseIdentifier: "MovieCell")
         
-        movies = Array(repeating: Movie(), count: 5)
+        //movies = Array(repeating: Movie(), count: 5)
+        downloadMovieByCategoryId()
+    }
+    
+    func downloadMovieByCategoryId() {
+        
+        SVProgressHUD.show()
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        
+        let parameters = ["categoryId": categoryId]
+        
+        AF.request(Urls.MOVIES_BY_CATEGORY_URL, method: .get, parameters: parameters, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
+            
+            if response.response?.statusCode == 200 {
+                let json = JSON(response.data!)
+                
+                if json["content"].exists() {
+                    if let array = json["content"].array {
+                        for item in array {
+                            let movie = Movie(json: item)
+                            self.movies.append(movie)
+                        }
+                    }
+                    self.tableView.reloadData()
+                } else {
+                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                }
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+            }
+            
+        }
+        
+        
     }
 
     // MARK: - Table view data source
@@ -35,6 +87,7 @@ class CategoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
 
         // Configure the cell...
+        cell.setData(movie: movies[indexPath.row])
 
         return cell
     }

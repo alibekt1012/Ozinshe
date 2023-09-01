@@ -221,7 +221,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let parameters = ["search": searchTextfield.text!]
         
-        AF.request(Urls.SEARCH_MOVIES_URL, method: .get, headers: headers).responseData { response in
+        AF.request(Urls.SEARCH_MOVIES_URL, method: .get, parameters: parameters, headers: headers).responseData { response in
             
             SVProgressHUD.dismiss()
             
@@ -257,12 +257,18 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
     
+    @IBAction func searchButtonTouched(_ sender: Any) {
+        downloadSearchMovies()
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieTableViewCell
+        cell.setData(movie: movies[indexPath.row])
     
         return cell
     }
