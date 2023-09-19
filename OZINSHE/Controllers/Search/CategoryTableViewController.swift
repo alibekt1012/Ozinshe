@@ -15,6 +15,7 @@ class CategoryTableViewController: UITableViewController {
     var movies: [Movie] = []
     
     var categoryId = 0
+    var categoryName = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class CategoryTableViewController: UITableViewController {
         
         //movies = Array(repeating: Movie(), count: 5)
         downloadMovieByCategoryId()
+        self.title = categoryName
     }
     
     func downloadMovieByCategoryId() {

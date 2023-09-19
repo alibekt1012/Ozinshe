@@ -8,10 +8,24 @@
 import Foundation
 import SwiftyJSON
 
+enum CellType {
+    case mainBanner
+    case mainMovie
+    case userHistory
+    case genre
+    case ageCategory
+}
+
 struct MainMovie {
     var categoryId = 0
     var categoryName = ""
     var movies: [Movie] = []
+    
+    var cellType: CellType = .mainMovie
+    
+    var genres: [Genre] = []
+    var categoryAges: [CategoryAge] = []
+    var bannerMovie: [BannerMovie] = []
     
     init() {
         

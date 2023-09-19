@@ -175,6 +175,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         let categoryMoviesVC = storyboard?.instantiateViewController(withIdentifier: "CategoryTableViewController") as! CategoryTableViewController
         
         categoryMoviesVC.categoryId = categories[indexPath.row].id
+        categoryMoviesVC.categoryName = categories[indexPath.row].name
         
         navigationController?.pushViewController(categoryMoviesVC, animated: true)
     }

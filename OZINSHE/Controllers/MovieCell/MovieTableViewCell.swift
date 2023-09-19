@@ -31,6 +31,11 @@ class MovieTableViewCell: UITableViewCell {
     func setData(movie: Movie) {
         nameLabel.text = movie.name
         yearLabel.text = "\(movie.year)"
+        
+        for item in movie.genres {
+            yearLabel.text = yearLabel.text! + " • " + item.name
+        }
+        
         posterImageView.sd_setImage(with: URL(string: movie.poster_link))
         
     }
