@@ -847,8 +847,196 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainBannerCell" rowHeight="272" id="TEs-vc-hvo" customClass="MainBannerTableViewCell" customModule="OZINSHE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="272"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TEs-vc-hvo" id="xaU-bI-3Zv">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="272"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q6E-AY-aAy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="272"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zVJ-fd-ub2">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="x2S-5H-gcO" customClass="MainBannerCollectionViewCell" customModule="OZINSHE" customModuleProvider="target">
+                                                            <rect key="frame" x="24" y="16" width="300" height="240"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mAO-qt-IHj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="300" height="240"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-8V-4jM">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="164"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="300" id="8TP-oV-fbX"/>
+                                                                            <constraint firstAttribute="height" constant="164" id="sHB-lE-4wd"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWz-iW-t0p">
+                                                                        <rect key="frame" x="0.0" y="180" width="300" height="37.666666666666657"/>
+                                                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                                                        <color key="textColor" red="0.066666666666666666" green="0.094117647058823528" blue="0.15294117647058825" alpha="0.69803921568627447" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKy-VZ-Ay4">
+                                                                        <rect key="frame" x="0.0" y="225.66666666666666" width="300" height="14.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                                                        <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="0.69803921568627447" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgY-wV-AeU">
+                                                                        <rect key="frame" x="8" y="8" width="45" height="24"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDI-ue-TVT">
+                                                                                <rect key="frame" x="8" y="5.0000000000000009" width="29" height="14.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="12"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" red="0.49411764705882355" green="0.1764705882352941" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="tDI-ue-TVT" secondAttribute="trailing" constant="8" id="9tq-M1-qOZ"/>
+                                                                            <constraint firstItem="tDI-ue-TVT" firstAttribute="leading" secondItem="FgY-wV-AeU" secondAttribute="leading" constant="8" id="Ghs-hl-Cjf"/>
+                                                                            <constraint firstItem="tDI-ue-TVT" firstAttribute="centerY" secondItem="FgY-wV-AeU" secondAttribute="centerY" id="cA6-lt-aEX"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="zFM-UT-QkM"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="KWz-iW-t0p" firstAttribute="top" secondItem="Xey-8V-4jM" secondAttribute="bottom" constant="16" id="7OD-3C-mW2"/>
+                                                                    <constraint firstItem="UKy-VZ-Ay4" firstAttribute="top" secondItem="KWz-iW-t0p" secondAttribute="bottom" constant="8" id="8XZ-EF-TrP"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="KWz-iW-t0p" secondAttribute="trailing" id="ETD-Hf-vrU"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="UKy-VZ-Ay4" secondAttribute="bottom" id="K3J-P4-beN"/>
+                                                                    <constraint firstItem="Xey-8V-4jM" firstAttribute="top" secondItem="mAO-qt-IHj" secondAttribute="top" id="OGN-gX-eBM"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="UKy-VZ-Ay4" secondAttribute="trailing" id="R5I-eF-lFg"/>
+                                                                    <constraint firstItem="FgY-wV-AeU" firstAttribute="top" secondItem="mAO-qt-IHj" secondAttribute="top" constant="8" id="SoB-Ka-Bec"/>
+                                                                    <constraint firstItem="KWz-iW-t0p" firstAttribute="leading" secondItem="mAO-qt-IHj" secondAttribute="leading" id="b1f-ht-fdr"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Xey-8V-4jM" secondAttribute="trailing" id="buq-4f-Ewx"/>
+                                                                    <constraint firstItem="UKy-VZ-Ay4" firstAttribute="leading" secondItem="mAO-qt-IHj" secondAttribute="leading" id="jez-Fe-gXA"/>
+                                                                    <constraint firstItem="Xey-8V-4jM" firstAttribute="leading" secondItem="mAO-qt-IHj" secondAttribute="leading" id="kPT-zV-RUL"/>
+                                                                    <constraint firstItem="FgY-wV-AeU" firstAttribute="leading" secondItem="mAO-qt-IHj" secondAttribute="leading" constant="8" id="ng9-GJ-Z3a"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="300" height="240"/>
+                                                            <connections>
+                                                                <outlet property="bannerCategoryView" destination="FgY-wV-AeU" id="Rde-7V-4NI"/>
+                                                                <outlet property="bannerImageView" destination="Xey-8V-4jM" id="JhW-GP-bSU"/>
+                                                                <outlet property="categoryLabel" destination="tDI-ue-TVT" id="sBc-Vs-UlL"/>
+                                                                <outlet property="descriptionLabel" destination="UKy-VZ-Ay4" id="Yfp-kY-Igb"/>
+                                                                <outlet property="titleLabel" destination="KWz-iW-t0p" id="TJH-pZ-VYk"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q6E-AY-aAy" firstAttribute="top" secondItem="xaU-bI-3Zv" secondAttribute="top" id="3z0-U2-3wc"/>
+                                                <constraint firstAttribute="bottom" secondItem="q6E-AY-aAy" secondAttribute="bottom" id="HbU-ck-rFo"/>
+                                                <constraint firstItem="q6E-AY-aAy" firstAttribute="leading" secondItem="xaU-bI-3Zv" secondAttribute="leading" id="UQl-Kg-Q6N"/>
+                                                <constraint firstAttribute="trailing" secondItem="q6E-AY-aAy" secondAttribute="trailing" id="k1P-s1-mcc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="q6E-AY-aAy" id="w0c-N4-uLX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="228" id="ow4-yj-4LF" customClass="HistoryTableViewCell" customModule="OZINSHE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="322" width="393" height="228"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ow4-yj-4LF" id="6zp-gk-uvX">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Қарауды жалғастырыңыз" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-cp-vOw">
+                                                    <rect key="frame" x="24" y="22" width="345" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="16"/>
+                                                    <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SeG-xe-meC">
+                                                    <rect key="frame" x="0.0" y="58" width="393" height="170"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="16" minimumInteritemSpacing="16" id="63j-1u-fXy">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="O8z-mB-QZW" customClass="HistoryCollectionViewCell" customModule="OZINSHE" customModuleProvider="target">
+                                                            <rect key="frame" x="24" y="7" width="184" height="156"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DSB-sT-P79">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184" height="156"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsF-Rr-BvK">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="112"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="112" id="9mt-Q6-9iv"/>
+                                                                            <constraint firstAttribute="width" constant="184" id="Rda-Ra-tyK"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b10-MF-NQw">
+                                                                        <rect key="frame" x="0.0" y="120.00000000000001" width="184" height="17.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="12"/>
+                                                                        <color key="textColor" red="0.066666666669999999" green="0.094117647060000004" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxl-hA-FM3">
+                                                                        <rect key="frame" x="0.0" y="141.66666666666666" width="184" height="14.333333333333343"/>
+                                                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                                                        <color key="textColor" red="0.61176470588235299" green="0.63921568627450975" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="fsF-Rr-BvK" firstAttribute="leading" secondItem="DSB-sT-P79" secondAttribute="leading" id="526-dY-TWW"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Jxl-hA-FM3" secondAttribute="trailing" id="Ej5-LQ-9M6"/>
+                                                                    <constraint firstItem="fsF-Rr-BvK" firstAttribute="top" secondItem="DSB-sT-P79" secondAttribute="top" id="Fbd-8h-ZEf"/>
+                                                                    <constraint firstItem="b10-MF-NQw" firstAttribute="leading" secondItem="DSB-sT-P79" secondAttribute="leading" id="Kw8-PX-2Dn"/>
+                                                                    <constraint firstItem="Jxl-hA-FM3" firstAttribute="top" secondItem="b10-MF-NQw" secondAttribute="bottom" constant="4" id="YeU-kX-gnM"/>
+                                                                    <constraint firstItem="Jxl-hA-FM3" firstAttribute="leading" secondItem="DSB-sT-P79" secondAttribute="leading" id="Z1z-yV-V9g"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Jxl-hA-FM3" secondAttribute="bottom" id="Zv1-gk-7xS"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="fsF-Rr-BvK" secondAttribute="trailing" id="dLk-cy-08g"/>
+                                                                    <constraint firstItem="b10-MF-NQw" firstAttribute="top" secondItem="fsF-Rr-BvK" secondAttribute="bottom" constant="8" id="fQ2-MJ-you"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="b10-MF-NQw" secondAttribute="trailing" id="rcr-48-JmR"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="184" height="156"/>
+                                                            <connections>
+                                                                <outlet property="categoryLabel" destination="Jxl-hA-FM3" id="hzF-Hi-h2H"/>
+                                                                <outlet property="nameLabel" destination="b10-MF-NQw" id="o8a-g8-G7X"/>
+                                                                <outlet property="posterImageView" destination="fsF-Rr-BvK" id="SfZ-Fm-Z7b"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SeG-xe-meC" firstAttribute="top" secondItem="D6t-cp-vOw" secondAttribute="bottom" constant="16" id="2UN-ec-Vpa"/>
+                                                <constraint firstItem="SeG-xe-meC" firstAttribute="leading" secondItem="6zp-gk-uvX" secondAttribute="leading" id="5gs-kp-2fz"/>
+                                                <constraint firstItem="D6t-cp-vOw" firstAttribute="top" secondItem="6zp-gk-uvX" secondAttribute="top" constant="22" id="7bT-6j-Bba"/>
+                                                <constraint firstAttribute="trailing" secondItem="D6t-cp-vOw" secondAttribute="trailing" constant="24" id="LVZ-gc-gsx"/>
+                                                <constraint firstAttribute="trailing" secondItem="SeG-xe-meC" secondAttribute="trailing" id="NUF-4p-aKY"/>
+                                                <constraint firstItem="D6t-cp-vOw" firstAttribute="leading" secondItem="6zp-gk-uvX" secondAttribute="leading" constant="24" id="pez-BG-vUT"/>
+                                                <constraint firstAttribute="bottom" secondItem="SeG-xe-meC" secondAttribute="bottom" id="raB-bF-R22"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="SeG-xe-meC" id="4Ew-h6-sqv"/>
+                                            <outlet property="historyLabel" destination="D6t-cp-vOw" id="hLs-aN-B5D"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="292" id="wxm-D1-tuf" customClass="MainTableViewCell" customModule="OZINSHE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="292"/>
+                                        <rect key="frame" x="0.0" y="550" width="393" height="292"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wxm-D1-tuf" id="RfQ-y9-k14">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="292"/>
@@ -944,19 +1132,19 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenreAgeCell" rowHeight="184" id="bF2-8P-JOL" customClass="GenreAgeTableViewCell" customModule="OZINSHE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="342" width="393" height="184"/>
+                                        <rect key="frame" x="0.0" y="842" width="393" height="184"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bF2-8P-JOL" id="tLp-ol-7Q2">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="184"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Сізге арналған фильмдер" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-uq-b6t">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Сізге арналған фильмдер" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-uq-b6t">
                                                     <rect key="frame" x="24" y="22" width="345" height="19.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JCV-0w-tMv">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JCV-0w-tMv">
                                                     <rect key="frame" x="0.0" y="57.333333333333329" width="393" height="136.66666666666669"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="16" minimumInteritemSpacing="16" id="dSV-vP-lLK">
@@ -969,7 +1157,7 @@
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pTC-gs-MuQ" customClass="GenreAgeCollectionViewCell" customModule="OZINSHE" customModuleProvider="target">
                                                             <rect key="frame" x="24" y="12.333333333333334" width="184" height="112"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Szm-GE-Xtq">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Szm-GE-Xtq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="184" height="112"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
@@ -980,8 +1168,8 @@
                                                                             <constraint firstAttribute="height" constant="112" id="r60-cQ-iSC"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Фильм" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28S-xD-IZ6">
-                                                                        <rect key="frame" x="0.0" y="47.666666666666664" width="184" height="16.999999999999993"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="Фильм" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28S-xD-IZ6">
+                                                                        <rect key="frame" x="0.0" y="47.666666666666657" width="184" height="17"/>
                                                                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>

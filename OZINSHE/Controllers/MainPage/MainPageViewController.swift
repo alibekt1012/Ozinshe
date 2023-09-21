@@ -22,13 +22,109 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        downloadMainMovies()
+        downloadMainBanners()
     }
     
     func addNavBarImage() {
         
     }
     
+    func downloadMainBanners() {
+        SVProgressHUD.show()
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        AF.request(Urls.MAIN_BANNERS_URL, method: .get, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
+            
+            if response.response?.statusCode == 200 {
+                let json = JSON(response.data!)
+                
+                if let array = json.array {
+                    
+                    var newMainMovie = MainMovie()
+                    newMainMovie.cellType = .mainBanner
+                    
+                    for item in array {
+                        let bannerMovie = BannerMovie(json: item)
+                        newMainMovie.bannerMovie.append(bannerMovie)
+                    }
+                    self.mainMovies.append(newMainMovie)
+                    self.tableView.reloadData()
+                } else {
+                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                }
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+            }
+            self.downloadHistory()
+            
+        }
+    }
+    
+    
+    func downloadHistory() {
+        SVProgressHUD.show()
+        
+        let headers: HTTPHeaders = [
+            "Authorization" : "Bearer \(Storage.sharedInstance.accessToken)"
+        ]
+        AF.request(Urls.HISTORY_URL, method: .get, headers: headers).responseData { response in
+            
+            SVProgressHUD.dismiss()
+            
+            var resultString = ""
+            if let data = response.data {
+                resultString = String(data: data, encoding: .utf8)!
+                print(resultString)
+            }
+            
+            if response.response?.statusCode == 200 {
+                let json = JSON(response.data!)
+                
+                if let array = json.array {
+                    
+                    var mainMovie = MainMovie()
+                    mainMovie.cellType = .userHistory
+                    
+                    for item in array {
+                        let movie = Movie(json: item)
+                        mainMovie.movies.append(movie)
+                     
+                    }
+                    if array.count > 0 {
+                        self.mainMovies.append(mainMovie)
+                    }
+
+                    self.tableView.reloadData()
+                } else {
+                    SVProgressHUD.showError(withStatus: "CONNECTION_ERROR".localized())
+                }
+            } else {
+                var ErrorString = "CONNECTION_ERROR".localized()
+                if let sCode = response.response?.statusCode {
+                    ErrorString = ErrorString + " \(sCode)"
+                }
+                ErrorString = ErrorString + " \(resultString)"
+                SVProgressHUD.showError(withStatus: "\(ErrorString)")
+            }
+            
+            self.downloadMainMovies()
+        }
+    }
     
     func downloadMainMovies() {
         SVProgressHUD.show()
@@ -206,6 +302,22 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             return cell
         }
         
+        if mainMovies[indexPath.row].cellType == .mainBanner {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mainBannerCell") as! MainBannerTableViewCell
+            
+            cell.setData(mainMovie: mainMovies[indexPath.row])
+            
+            return cell
+        }
+        
+        if mainMovies[indexPath.row].cellType == .userHistory {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell") as! HistoryTableViewCell
+            
+            cell.setData(mainMovie: mainMovies[indexPath.row])
+            
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as! MainTableViewCell
         
         cell.setData(mainMovie: mainMovies[indexPath.row])
@@ -220,6 +332,12 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         }
         if mainMovies[indexPath.row].cellType == .genre {
             return 184
+        }
+        if mainMovies[indexPath.row].cellType == .mainBanner {
+            return 272
+        }
+        if mainMovies[indexPath.row].cellType == .userHistory {
+            return 228
         }
         
         return 292
